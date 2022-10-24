@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    src: url("/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,body {
+    margin: 0;
+}
+
+.flex-header {
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    background-color: #DDDFE1; /* rgba(169, 174, 179, 0.4); */ /* #A9AEB3 40% alpha */
+    color: #212427;
+    /* margin: 0px 10px 25px 25px; */
+    /* padding: 5px; */
+    /* min-height: 15vh; */
+    position: relative;
+}
+.flex-row1 {
+    display: flex;
+    border: 1px solid blue;
+    /* height: 50px; */
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-left: 32px;
+    margin-right: 32px;
+    /* color: #212427; */
+    /* min-height: 7.5vh; */
+}
+
+.flex-row2 {
+    display: flex;
+    border: 1px solid green;
+
+    margin-left: 32px;
+    margin-right: 32px;
+    /* height: 50px;
+    gap: 80px;
+    min-height: 7.5vh; */
+}
+
+/* .logo-column1 {
+    align-self: center;
+    width: 10%;
+} */
+
+#logo-img {
+    /* display: flex; */
+    border: 1px solid;
+    max-width: 200px;
+    /* justify-content: space-between; */
+    /* gap: 10em; */
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-left: 48px; */
+    margin-right: 32px;
+}
+
+.menu-column2 {
+    align-self: end;
+    flex-grow: 1;
+
+    margin-left: 32px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+    
+    color: #212427;
+    text-decoration: none;
+    /* margin-left: 10px;
+    padding: 5px; */
+}
+
+.nav-menu a {
+    color: #212427;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: #BE5A38;
+    text-decoration: underline;
+}
+
+a.active {
+    color: #BE5A38;
+    text-decoration: underline;
+}
+
+/*
+.flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-basis: 200px;
+    background-color: #A9AEB3;
+}
+
+.flex-container > div {
+    background-color: red;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+.icon-bag {
+align-self: flex-end;
+    order: 1;
+    flex-grow: 0;
+}
+
+.logo {
+    align-items: auto;
+    order: 2;
+}
+
+.menu {
+    align-self: flex-end;
+    order: 3;
+    flex-grow: 1;
+}
+
+/*
+header {
+    background-color: #A9AEB3;
+    color: red;
+}
+
+.icon-bag {
+    margin-left: 408px;
+}
+
+.logo {
+    margin-left: 25px;
+}
+
+nav {
+    margin-left: 408px;
+}
+
+nav li {
+    display: inline-block;
+}
+*/
