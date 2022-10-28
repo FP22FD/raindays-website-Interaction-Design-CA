@@ -9,75 +9,63 @@
     <title>Rainydays | Home</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- <div id="pappone">
-        <header></header>
-        <main></main>
-        <footer></footer>
-    </div> -->
-    <!----------------------------------------------------------------------------------------->
-    <header class="flex-header">
+    <div id="main-container">
 
-        <div class="flex-row1">
+        <header>
 
-            <a href="your-bag.html">
-                <img id="xxsvg" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
-            </a>
-        </div>
-
-        <div class="flex-row2">
-
-            <a id="logo-img" href="index.html">
-                <img src="assets/images/RainyDays_Logo.png" alt="rainydays-logo" />
-            </a>
-
-            <div class="menu-column2">
-                <!-- TODO: adicionare elenco puntato con UL e Li per hamburger version mobile -->
-                <nav class="nav-menu" aria-label="Main menu">
-                    <a class="active" href="index.html">Home</a>
-                    <a href="products.html">Women</a>
-                    <a href="products.html">Men</a>
-                    <a href="about-us.html">About us</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="find-us.html">Find us</a>
-                </nav>
+            <div class="row1">
+                <a href="your-bag.html">
+                    <img id="xxsvg" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
+                </a>
             </div>
 
-        </div>
-    </header>
-    <!----------------------------------------------------------------------------------------->
-    <br /><br /><br /><br />
+            <div class="row2">
 
-    <main>
+                <a id="logo-img" href="index.html">
+                    <img src="assets/images/RainyDays_Logo.png" alt="rainydays-logo" />
+                </a>
 
-        <!----------------------------------------------------------------------------------------->
-        <section class="container">
-            <div class="row">
-                <img src="assets/images/RainyDays_Jacket1.png" alt="img" class="img">
-            </div>
-
-            <div class="div-block">
-                <div class="text-block">
-                    <a href="products.html">
-                        <h2>new collection<br>2022</h2>
-                    </a>
-                    <!-- TODO: la icona "right arrow" voglio che diventi arancione -->
-                    <a href="products.html"><img src="assets/icons/Forward Arrow.svg" alt="Forward-arrow"
-                            class="icon"></a>
+                <div class="menu">
+                    <!-- TODO: adicionare elenco puntato con UL e Li per hamburger version mobile -->
+                    <nav aria-label="Main menu">
+                        <a class="active" href="index.html">Home</a>
+                        <a href="products.html">Women</a>
+                        <a href="products.html">Men</a>
+                        <a href="about-us.html">About us</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="find-us.html">Find us</a>
+                    </nav>
                 </div>
 
             </div>
-        </section>
-        <!----------------------------------------------------------------------------------------->
-        <br /><br /><br /><br />
-        <!----------------------------------------------------------------------------------------->
-        <section>
-            <div class="top-filter">
+        </header>
+
+        <main id="main">
+            <section id="banner-top">
+                <div class="image">
+                    <img src="assets/images/RainyDays_Jacket1.png" alt="img" class="img">
+                </div>
+
+                <div class="text-container">
+                    <div class="text">
+                        <a href="products.html">
+                            <p class="display-2">new collection<br>2022</p>
+                        </a>
+                        <!-- TODO: la icona "right arrow" voglio che diventi arancione -->
+                        <a href="products.html"><img src="assets/icons/Forward Arrow.svg" alt="Forward-arrow"
+                                class="icon"></a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="filter-top">
                 <a class="active" href="products.html">All</a>
                 <a href="products.html">Woman</a>
                 <a href="products.html">Men</a>
@@ -88,184 +76,269 @@
                 <a href="products.html">Camping</a>
                 <a href="products.html">Canoeing</a>
                 <a href="products.html">Winter</a>
-            </div>
-        </section>
-        <!----------------------------------------------------------------------------------------->
-        <br /><br /><br /><br />
-        <!----------------------------------------------------------------------------------------->
-        <section class="grid-container-products">
-            <!-- <div class="flex-prova"> -->
+            </section>
 
-            <div class="flex-product">
-                <div class="img1">
-                    <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
-                </div>
-                <div class="flex-text2">
-                    <a href="products.html">
-                        <span class="box-txt">Women’s Waterproof Jacket
-                        </span>
-                        <br>
-                        <span>WF28</span>
-                    </a>
-                    <div class="price">
-                        <span>kr 900,00</span>
+            <section id="products">
+
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-
-
-            <div class="flex-product">
-                <div class="img2">
-                    <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
-                </div>
-                <div class="flex-text2">
-                    <a href="products.html">
-                        <span class="box-txt">Women’s Waterproof Jacket
-                        </span>
-                        <br>
-                        <span>WF28</span>
-                    </a>
-                    <div class="price">
-                        <span>kr 900,00</span>
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flex-product">
-                <div class="img2">
-                    <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
-                </div>
-                <div class="flex-text2">
-                    <a href="products.html">
-                        <span class="box-txt">Women’s Waterproof Jacket
-                        </span>
-                        <br>
-                        <span>WF28</span>
-                    </a>
-                    <div class="price">
-                        <span>kr 900,00</span>
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flex-product">
-                <div class="img2">
-                    <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
-                </div>
-                <div class="flex-text2">
-                    <a href="products.html">
-                        <span class="box-txt">Women’s Waterproof Jacket
-                        </span>
-                        <br>
-                        <span>WF28</span>
-                    </a>
-                    <div class="price">
-                        <span>kr 900,00</span>
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="flex-product">
-                <div class="img2">
-                    <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
-                </div>
-                <div class="flex-text2">
-                    <a href="products.html">
-                        <span class="box-txt">Women’s Waterproof Jacket
-                        </span>
-                        <br>
-                        <span>WF28</span>
-                    </a>
-                    <div class="price">
-                        <span>kr 900,00</span>
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-
-
-
-            <!-- </div> -->
-        </section>
-        <!----------------------------------------------------------------------------------------->
-        <br /><br /><br /><br />
-        <!----------------------------------------------------------------------------------------->
-        <section class="bottom-banner">
-
-            <div class="grid-container">
-                <div class="img-women">
-                    <img src="assets/images/RainyDays_Jacket3m.png" alt="season-jacket-women">
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-text">
-                    <a href="products.html">
-                        <p>Season jackets<br>women</p>
-                    </a>
-                </div>
-            </div>
 
-            <div class="grid-container">
-                <div class="img-men">
-                    <img src="assets/images/RainyDays_Jacket3.png" alt="season-jacket-men">
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-text">
-                    <a href="products.html">
-                        <p>Season jackets<br>men</p>
-                    </a>
-                </div>
-            </div>
 
-        </section>
-        <br /><br /><br /><br />
-        <!----------------------------------------------------------------------------------------->
-        <section>
-            <div>
-                <div class="pagination">
-                    <a href="products.html" class="active">
-                        1
-                    </a>
-                    <a href="products.html">
-                        2
-                    </a>
-                    <a href="products.html">
-                        3
-                    </a>
-                    <a href="products.html"><img src="assets/icons/Forward Arrow.svg" alt="Forward-arrow"
-                            class="right-arrow-small"></a>
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!----------------------------------------------------------------------------------------->
-        <br /><br /><br /><br />
-        <!----------------------------------------------------------------------------------------->
 
-        <section>
-            <div class="bottom-filter">
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket7.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <span class="box-txt">Women’s Waterproof Jacket
+                            </span>
+                            <br>
+                            <span>WF28</span>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="banner-bottom">
+                <div class="container">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket3m.png" alt="season-jacket-women">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <p>Season jackets<br>women</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div>
+                        <img src="assets/images/RainyDays_Jacket3.png" alt="season-jacket-men">
+                    </div>
+                    <div class="text">
+                        <a href="products.html">
+                            <p>Season jackets<br>men</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="products-pagination">
+                <a href="products.html" class="active">
+                    1
+                </a>
+                <a href="products.html">
+                    2
+                </a>
+                <a href="products.html">
+                    3
+                </a>
+                <a href="products.html">
+                    <img src="assets/icons/Forward Arrow.svg" alt="Forward-arrow" class="right-arrow-small" />
+                </a>
+            </section>
+
+            <section id="promo-bottom">
                 <a href="products.html">OUTLET 30 % OFF ALL SUMMER JACKETS!</a>
                 <a href="products.html">code: sum22</a>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <br /><br /><br /><br />
-        <!----------------------------------------------------------------------------------------->
-
-    </main>
-
-    <footer>
-        <div class="container-footer">
-
-            <!-- footer row 1 -->
+        <footer>
             <div class="social-media">
                 <a href="https://www.instagram.com"><img src="assets/icons/icon_instagram.svg" /></a>
                 <a href="https://www.instagram.com"><img src="assets/icons/icon_twitter.svg" /></a>
                 <a href="https://www.instagram.com"><img src="assets/icons/icon_youtube.svg" /></a>
             </div>
-            <!-- end footer row -->
-
-            <div class="row-footer">
-
-                <!-- footer col 1 -->
-                <nav class="footer-col" aria-labelledby="menu-help">
+            <div class="header">
+                <nav class="col" aria-labelledby="menu-help">
                     <h4 id="menu-help">Help</h4>
                     <ul>
                         <li><a href="not-available.html">Track order</a></li>
@@ -276,10 +349,7 @@
                         <li><a href="not-available.html">FAQ</a></li>
                     </ul>
                 </nav>
-                <!-- end footer col -->
-
-                <!-- footer col 2 -->
-                <nav class="footer-col" aria-labelledby="menu-contact">
+                <nav class="col" aria-labelledby="menu-contact">
                     <h4 id="menu-contact">Contact</h4>
                     <ul>
                         <li><a href="contact.html">Contact us</a></li>
@@ -290,10 +360,7 @@
                         <li><a href="not-available.html">Investors site</a></li>
                     </ul>
                 </nav>
-                <!-- end footer col -->
-
-                <!-- footer col 3 -->
-                <nav class="footer-col" aria-labelledby="menu-about-us">
+                <nav class="col" aria-labelledby="menu-about-us">
                     <h4 id="menu-about-us">About us</h4>
                     <ul>
                         <li><a href="not-available.html">Our story</a></li>
@@ -301,21 +368,16 @@
                         <li><a href="not-available.html">Transparency</a></li>
                     </ul>
                 </nav>
-                <!-- end footer col -->
             </div>
-
-            <!-- footer row 3-->
-            <div class="bottom-footer">
+            <div class="bottom">
                 <a href="not-available.html">&copy; Rainydays 2022</a>
                 <span>|</span>
                 <a href="not-available.html">Privacy</a>
                 <span>|</span>
                 <a href="not-available.html">Cookies</a>
             </div>
-            <!-- end footer col -->
-
-        </div>
-    </footer>
+        </footer>
+    </div>
 
 </body>
 

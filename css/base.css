@@ -12,6 +12,7 @@
 
 body {
     font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #DFDFDF;
 }
 
 html,body {
@@ -41,6 +42,7 @@ a {
     color: #212427;
     text-decoration: none;
 }
+
 a:hover {
     transition: all 0.3s ease;
     color: var(--primary-color);
@@ -48,7 +50,18 @@ a:hover {
     /* text-decoration: underline; */
     font-weight: bold;
 }
+
 a.active {
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+.display-2 {
+    font-size: 64px;
+}
+
+@media (max-width: 800px) {
+    .display-2 {
+        font-size: 32px;
+    }
 }

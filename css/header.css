@@ -1,35 +1,39 @@
-.flex-header {
+header {
+    grid-area: header;
+
     display: flex;
     flex-direction: column;
     background-color:#A9AEB3; /* rgba(169, 174, 179, 0.4); */ /* #A9AEB3 40% alpha */
     color: #212427;
     position: relative;
 }
-.flex-row1 {
+
+header .row1 {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-left: 32px;
     margin-right: 32px;
+    margin-top: 8px;
 }
 
-.flex-row2 {
+header .row2 {
     display: flex;
     margin-left: 32px;
     margin-right: 32px;
 }
 
-#logo-img {
+header #logo-img {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 32px;
 }
 
-#logo-img img {
+header #logo-img img {
     max-width: 200px;
 }
 
-.menu-column2 {
+header .menu {
     align-self: end;
     font-size: 22px;
 
@@ -37,7 +41,7 @@
     margin-left: 32px;
 }
 
-.nav-menu {
+header nav {
     display: flex;
     justify-content: space-between;
     gap: 8px;
