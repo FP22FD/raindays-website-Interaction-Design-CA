@@ -20,6 +20,25 @@
         <header>
 
             <div class="row1">
+                <!-- menu mobile version -->
+                <div id="menu-mobile">
+                    <label for="hamburger-menu">
+                        <img src="assets/icons/hamburger_button.svg" alt="hamburger menu" />
+                    </label>
+                    <input type="checkbox" id="hamburger-menu" />
+
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="products.html">Women</a></li>
+                            <li><a href="products.html">Men</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="find-us.html">Find us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
                 <a href="your-bag.html">
                     <img id="xxsvg" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
                 </a>
@@ -31,8 +50,8 @@
                     <img src="assets/images/RainyDays_Logo.png" alt="rainydays-logo" />
                 </a>
 
-                <div class="menu">
-                    <!-- TODO: adicionare elenco puntato con UL e Li per hamburger version mobile -->
+                <!-- menu desktop version -->
+                <div class="menu-desktop">
                     <nav aria-label="Main menu">
                         <a class="active" href="index.html">Home</a>
                         <a href="products.html">Women</a>
@@ -58,7 +77,7 @@
                             <p class="display-2">new collection<br>2022</p>
                         </a>
                         <!-- TODO: la icona "right arrow" voglio che diventi arancione -->
-                        <a href="products.html"><img src="assets/icons/Forward Arrow.svg" alt="Forward-arrow"
+                        <a href="products.html"><img src="assets/icons/forward-arrow.svg" alt="Forward-arrow"
                                 class="icon"></a>
                     </div>
 
@@ -321,7 +340,15 @@
                     3
                 </a>
                 <a href="products.html">
-                    <img src="assets/icons/Forward Arrow.svg" alt="Forward-arrow" class="right-arrow-small" />
+                    <img src="assets/icons/forward-arrow.svg" alt="Forward-arrow" class="right-arrow-small" />
+                </a>
+            </section>
+
+            <!-- menu mobile version -->
+            <section class="cta-large">
+                <a href="products.html">
+                    View more
+                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow" id="right-arrow-small" />
                 </a>
             </section>
 
@@ -329,6 +356,7 @@
                 <a href="products.html">OUTLET 30 % OFF ALL SUMMER JACKETS!</a>
                 <a href="products.html">code: sum22</a>
             </section>
+
         </main>
 
         <footer>

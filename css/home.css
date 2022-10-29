@@ -29,6 +29,7 @@ main {
 
 #banner-top .image {
     display: flex;
+    justify-content: center;
 }
 
 #banner-top .image img {
@@ -51,7 +52,6 @@ main {
 #banner-top .text p {
     display: inline;
     text-transform: uppercase;
-    /* font-size: 64px; */
 }
 
 #banner-top .icon {
@@ -106,44 +106,7 @@ main {
     margin-bottom: 24px;
 }
 
-/*---home page layout grid---*/
 
-
-/*
-
-#totalcontent > header {
-    max-height: 190px;
-}
-
-#totalcontent > footer {
-    max-height: 402px;
-}
-
-#main {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
-
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-} */
-/*
-main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    justify-content: space-around;
-
-
-    border: 1px solid;
-    text-align: center;
-
-}
-
-/* bottom banner */
 
 #banner-bottom {
     display: flex;
@@ -227,18 +190,70 @@ main {
     color: #FFFFFF;
 }
 
+/* CTA - view more */
+
+.cta-large {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #264348;
+    text-transform: uppercase;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.cta-large a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.cta-large a:not(:hover) {
+    color: #FFFFFF;
+}
+
 @media (max-width: 800px) {
     #main-container {
         grid-template-columns: 0px auto 0px;
     }
 
+    #banner-top {
+        flex-direction: column;
+    }
+
+    #banner-top .text-container {
+        justify-content: space-around;
+    }
+
+    #banner-top .icon {
+        width: 32px;
+    }
+
+    #filter-top {
+        flex-wrap: wrap;
+    }
+
     #products {
         grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr; */
+        /* grid-auto-rows: 0px; */
+        /* overflow-y: hidden; */
         column-gap: 8px;
         row-gap: 8px;
     }
 
-    #products {
-        /* display: none; */
+    #products .product:nth-child(n+3) {
+        display: none;
+        
+    }
+
+    #promo-bottom {
+        display: none;
+    }
+
+    .cta-large {
+        display: flex;
     }
 }
