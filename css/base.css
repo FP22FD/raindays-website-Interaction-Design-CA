@@ -38,8 +38,12 @@ html, body {
     --space-6: 64px;
 }
 
-h2 {
+h2, p {
     color: #212427;
+}
+
+hr {
+    border-top: 1px solid #A9AEB3;
 }
 
 a {
