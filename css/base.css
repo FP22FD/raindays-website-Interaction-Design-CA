@@ -10,25 +10,17 @@
     src: url("/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
-body {
-    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #DFDFDF;
-}
-
-html, body {
-    margin: 0;
-}
-
 :root {
     /* dark coral */
-    --primary-color: #BE5A38; 
+    --primary-color: #BE5A38;
 
+    --text-color: #212427;
     /* medium light grey background */
-    --bg-gray-light-color: #DFDFDF; 
+    --bg-gray-light-color: #DFDFDF;
 
     /* grigetto chiaro */
-    --bg-gray-line: #A9AEB3; 
-    
+    --bg-gray-line: #A9AEB3;
+
     --white: #FFF;
     --space-1: 8px;
     --space-2: 16px;
@@ -38,8 +30,33 @@ html, body {
     --space-6: 64px;
 }
 
+body {
+    background-color: #DFDFDF;
+}
+
+html, body {
+    margin: 0;
+}
+
+body,
+textarea, 
+input {
+    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea, input {
+    color: var(--text-color);
+    border-radius: 4px;
+    border: 1px solid #A9AEB3;
+    padding: 8px;
+}
+
+textarea:focus, input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
 h2, p {
-    color: #212427;
+    color: var(--text-color);
 }
 
 hr {
@@ -51,7 +68,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, 
+a:hover * {
     transition: all 0.3s ease;
     color: var(--primary-color);
     
@@ -66,6 +84,10 @@ a.active {
 
 .display-2 {
     font-size: 64px;
+}
+
+.text-light {
+    color: #ccc;
 }
 
 @media (max-width: 800px) {
