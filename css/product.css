@@ -54,6 +54,7 @@
 .item4 {
     grid-area: 2 / 5/ span 1 / span 8;
 }
+
 #product-colors {
     display: flex;
 }
@@ -69,20 +70,25 @@
     align-items: center;
     justify-content: center;
 }
+
 #product-colors .colors {
     width: 24px;
     height: 24px;
     border-radius: 50%;
 }
+
 #product-colors #label-color-1 {
     background-color: #464E2E;
 }
+
 #product-colors #label-color-2 {
     background-color: #FFFFFF;
 }
+
 #product-colors #label-color-3 {
     background-color: #000000;
 }
+
 #product-colors input[type="radio"]:checked+label {
     border: 1px solid #464E2E;
 }

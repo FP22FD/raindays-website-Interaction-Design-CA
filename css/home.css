@@ -78,6 +78,7 @@
 .cta-large {
     display: none;
 }
+
 @media (max-width: 800px) {
     #main-container {
         grid-template-columns: 0px auto 0px;

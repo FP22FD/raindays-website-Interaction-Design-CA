@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/checkout-success.css">
 </head>
 
 <body>
@@ -67,60 +67,38 @@
 
         <main id="main">
 
-            <section class="item1">
-                <img src="assets/images/RainyDays_Jacket7.png" alt="green Jacket">
+            <div id="overlay"></div>
 
-                <div id="description">
-                    <h1>Men’s Fleece Jacket FE40 </h1>
-
-                    <div id="size-qty">
-                        <div>Size: M</div>
-                        <div>Q.ty: 1</div>
+            <div id="box">
+                <div id="modal">
+                    <div id="check">
+                        <img src="assets/icons/check.svg" alt="icon check">
                     </div>
 
-                    <div>Delivery: Free</div>
-                    <div id="price">kr 900,00 </div>
+                    <div id="payment">
+                        Payment successful<br>
+                        Thank you!
+                    </div>
+                    <hr>
+                    <div id="social-media">
+                        <a href="https://www.instagram.com"><img src="assets/icons/icon_instagram.svg" /></a>
+                        <a href="https://www.instagram.com"><img src="assets/icons/icon_twitter.svg" /></a>
+                        <a href="https://www.instagram.com"><img src="assets/icons/icon_youtube.svg" /></a>
+                    </div>
 
+                    <div id="progress-bar">
+                        <img src="assets/icons/progress-bar-3.svg" alt="progress bar">
+                    </div>
+
+                    <div class="cta-large">
+                        <a href="checkout-success.html">
+                            Home
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow"
+                                id="right-arrow-small" />
+                        </a>
+                    </div>
                 </div>
-            </section>
-
-            <section class="item2">
-
-                <div id="address">
-                    Jeni Smitt Avenue Park, 4 <br>
-                    1129 <br>
-                    New York, USA
-                </div>
-                <div id="card">
-                    <img src="assets/icons/icon_visa.svg" alt="Visa">
-                    <span>**** **** **** 2039</span>
-                </div>
-
-                <div id="progress-bar">
-                    <img src="assets/icons/progress-bar-2.svg" alt="progress bar">
-                </div>
-
-                <div id="total">
-                    <div>Total</div>
-                    <div>2250 kr</div>
-                </div>
-
-                <div class="cta-large">
-                    <a href="checkout-success.html">
-                        Pay
-                        <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow" id="right-arrow-small" />
-                    </a>
-                </div>
-
-            </section>
-
-            <!-- menu mobile version
-            <section class="cta-large">
-                <a href="products.html">
-                    View more
-                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow" id="right-arrow-small" />
-                </a>
-            </section>  -->
+            </div>
 
         </main>
 
