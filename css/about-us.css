@@ -37,3 +37,17 @@
 .item3 p {
     margin-top: 0
 }
+
+@media (max-width: 800px) {
+    #grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item1 img {
+        /* the object-fit property will fit image without changing the proportionally.
+    Ref: https: //www.geeksforgeeks.org/resize-image-proportionally-with-css/ */
+        object-fit: contain;
+        max-height: 30vh;
+    }
+}

@@ -10,16 +10,22 @@
     src: url("/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
 }
 
+/*You can use CSS variables to keep common CSS values such as sizes,colors,fonts, etc (from discordi)*/
 :root {
     /* dark coral */
     --primary-color: #BE5A38;
 
+    /* font color */
     --text-color: #212427;
+
     /* medium light grey background */
     --bg-gray-light-color: #DFDFDF;
 
     /* grigetto chiaro */
     --bg-gray-line: #A9AEB3;
+
+    /* background beige color "eggeshell" */
+    --bg-beige-color: #E9E5D6;
 
     --white: #FFF;
     --space-1: 8px;

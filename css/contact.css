@@ -75,3 +75,18 @@ button[type="submit"] {
 button[type="submit"]:hover {
     color: var(--primary-color);
 }
+
+@media (max-width: 800px) {
+    #flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .item1 img {
+        /* the object-fit property will fit image without changing the proportionally.
+    Ref: https: //www.geeksforgeeks.org/resize-image-proportionally-with-css/ */
+        object-fit: contain;
+        max-height: 30vh;
+    }
+}
