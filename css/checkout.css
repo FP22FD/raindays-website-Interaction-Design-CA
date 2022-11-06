@@ -1,130 +1,129 @@
 main {
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
 }
 
 /* item 1 */
 
 .item1 {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
 
-    background-color: #E9E5D6;
-    padding: 24px;
-    
+  background-color: #e9e5d6;
+  padding: 24px;
 }
 .item1 #image {
-    background-color: #efefef;
-    padding: 16px;
+  background-color: #efefef;
+  padding: 16px;
 }
 
 .item1 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .item1 #description {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .item1 #size-qty {
-    display: flex;
+  display: flex;
 }
 .item1 #size-qty div {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .item1 #price {
-    color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 /* item 2 */
 
 .item2 {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
 
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .item2 #summary {
-    background-color: #E9E5D6;
-    text-transform: capitalize;
-    padding-left: 24px;
-    margin: 0 0 24px 0;
-    font-size: large;
+  background-color: #e9e5d6;
+  text-transform: capitalize;
+  padding-left: 24px;
+  margin: 0 0 24px 0;
+  font-size: large;
 }
 
 .item2 #address {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
 
-    background-color: #E9E5D6;
-    text-transform: capitalize;
-    padding: 24px; 
-    margin: 0 0 24px 0;  
-    font-size: large;
+  background-color: #e9e5d6;
+  text-transform: capitalize;
+  padding: 24px;
+  margin: 0 0 24px 0;
+  font-size: large;
 }
 
 .item2 #card {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 
-    background-color: #E9E5D6;
-    text-transform:capitalize;
-    padding: 24px;
-    margin: 0 0 24px 0;
+  background-color: #e9e5d6;
+  text-transform: capitalize;
+  padding: 24px;
+  margin: 0 0 24px 0;
 }
 
 .item2 #progress-bar {
-    align-self: center;
-    padding: 24px; 
-    margin: 0 0 24px 0;
+  align-self: center;
+  padding: 24px;
+  margin: 0 0 24px 0;
 }
 
 .item2 #total {
-    display: flex;
-    column-gap: 8px;
-    
-    text-transform: capitalize;
-    margin: 0 0 24px 0;
-    font-size: x-large;
+  display: flex;
+  column-gap: 8px;
+
+  text-transform: capitalize;
+  margin: 0 0 24px 0;
+  font-size: x-large;
 }
 
 .item2 #total div {
-    display: flex;
-    flex-basis: 50%;
+  display: flex;
+  flex-basis: 50%;
 
-    background-color: #E9E5D6;
-    padding: 24px;
-    justify-content: center;
+  background-color: #e9e5d6;
+  padding: 24px;
+  justify-content: center;
 }
 
 .item2 .cta-large {
-    display: block;
+  display: block;
 }
 
 /* media query*/
 
 @media (max-width: 800px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 
-.item1 img {
+  .item1 img {
     /* the object-fit property will fit image without changing the proportionally.
     Ref: https: //www.geeksforgeeks.org/resize-image-proportionally-with-css/ */
     object-fit: contain;
     max-height: 30vh;
-}
+  }
 }

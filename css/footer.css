@@ -1,89 +1,89 @@
 footer {
-    grid-area: footer;
+  grid-area: footer;
 
-    background-color: #A9AEB3;
+  background-color: #a9aeb3;
 }
 
 footer .social-media {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 30px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    padding-top: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-top: 32px;
 }
 
 footer .social-media a {
-    height: 24px;
+  height: 24px;
 }
 
 footer .social-media a:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 footer .social-media a:not(:last-child) {
-    margin-right: 24px;
+  margin-right: 24px;
 }
 
 /*------------------------------------------*/
 footer .header {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    /* align-content: stretch; */
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  /* align-content: stretch; */
+  justify-content: space-around;
 }
 
 footer .col {
-    width: 25%;
-    padding: 0 15px;
+  width: 25%;
+  padding: 0 15px;
 }
 
 footer .col h4 {
-    font-size: 24px;
-    color: #212427;
-    margin-bottom: 24px;
-    font-weight: 400;
-    position: relative;
+  font-size: 24px;
+  color: #212427;
+  margin-bottom: 24px;
+  font-weight: 400;
+  position: relative;
 }
 
 footer .col ul {
-    list-style-type: none;
-    padding-left: 0px;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 footer .col ul li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 footer .col ul li a {
-    display: block;
+  display: block;
 }
 
 /*------------------------------------------*/
 
 footer .bottom {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 16px;
-    margin-top: 8px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 16px;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .bottom a {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 footer .bottom a:not(:last-child),
 footer .bottom span:not(:last-child) {
-    margin-right: 64px;
+  margin-right: 64px;
 }
 
 @media (max-width: 800px) {
-    footer {
-        display: none;
-    }
+  footer {
+    display: none;
+  }
 }

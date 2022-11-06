@@ -7,13 +7,13 @@ A simple overview of use/purpose.
 An in-depth paragraph about your project and overview of use.
 
 - check html validity:
-<https://validator.w3.org/>
+  <https://validator.w3.org/>
 
 - check css validity:
-<https://jigsaw.w3.org/css-validator/>
+  <https://jigsaw.w3.org/css-validator/>
 
 - check redirect links:
-<https://validator.w3.org/checklink>
+  <https://validator.w3.org/checklink>
 
 ## Getting Started
 

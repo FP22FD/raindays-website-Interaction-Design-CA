@@ -1,102 +1,108 @@
 @font-face {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
 }
 @font-face {
-    font-family: "Montserrat";
-    font-style: italic;
-    src: url("/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-family: "Montserrat";
+  font-style: italic;
+  src: url("/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
 }
 
 /*You can use CSS variables to keep common CSS values such as sizes,colors,fonts, etc (from discordi)*/
 :root {
-    /* dark coral */
-    --primary-color: #BE5A38;
+  /* dark coral */
+  --primary-color: #be5a38;
 
-    /* font color */
-    --text-color: #212427;
+  /* font color */
+  --text-color: #212427;
 
-    /* medium light grey background */
-    --bg-gray-light-color: #DFDFDF;
+  /* medium light grey background */
+  --bg-gray-light-color: #dfdfdf;
 
-    /* grigetto chiaro */
-    --bg-gray-line: #A9AEB3;
+  /* grigetto chiaro */
+  --bg-gray-line: #a9aeb3;
 
-    /* background beige color "eggeshell" */
-    --bg-beige-color: #E9E5D6;
+  /* background beige color "eggeshell" */
+  --bg-beige-color: #e9e5d6;
 
-    --white: #FFF;
-    --space-1: 8px;
-    --space-2: 16px;
-    --space-3: 24px;
-    --space-4: 32px;
-    --space-5: 48px;
-    --space-6: 64px;
+  --white: #fff;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
 }
 
 body {
-    background-color: #DFDFDF;
+  background-color: #dfdfdf;
 }
 
-html, body {
-    margin: 0;
+html,
+body {
+  margin: 0;
 }
 
 body,
-textarea, 
-input, 
+textarea,
+input,
 button {
-    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
 
-textarea, input {
-    color: var(--text-color);
-    border-radius: 4px;
-    border: 1px solid #A9AEB3;
-    padding: 8px;
+textarea,
+input {
+  color: var(--text-color);
+  border-radius: 4px;
+  border: 1px solid #a9aeb3;
+  padding: 8px;
 }
 
 button[type="submit"] {
-    font-size: 16px;
-    text-transform: uppercase;
-    border: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 0;
 }
 
-textarea:focus, input:focus {
-    outline: 1px solid var(--primary-color);
+textarea:focus,
+input:focus {
+  outline: 1px solid var(--primary-color);
 }
 
-h2, p {
-    color: var(--text-color);
+h2,
+p {
+  color: var(--text-color);
 }
 
 hr {
-    border-top: 1px solid #A9AEB3;
+  border-top: 1px solid #a9aeb3;
 }
 
 a {
-    color: #212427;
-    text-decoration: none;
+  color: #212427;
+  text-decoration: none;
 }
 
-a:hover, 
+a:hover,
 a:hover * {
-    transition: all 0.3s ease;
-    color: var(--primary-color);
-    
-    /* text-decoration: underline; */
-    font-weight: bold;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+
+  /* text-decoration: underline; */
+  font-weight: bold;
 }
 
 a.active {
-    color: var(--primary-color);
-    text-decoration: underline;
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .display-2 {
-    font-size: 64px;
+  font-size: 64px;
 }
 
 /* .text-light {
@@ -104,7 +110,7 @@ a.active {
 } */
 
 @media (max-width: 800px) {
-    .display-2 {
-        font-size: 32px;
-    }
+  .display-2 {
+    font-size: 32px;
+  }
 }
