@@ -24,7 +24,7 @@ The website implementation has been made with `HTML` and `CSS` to practice:
 
 Implemented structure flows:
 
-- users can access the site by desktop and mobile devices.
+- users can access the site by desktop and mobile devices (breakpoint at 800px).
 - users will be able to browse all available products and pay for them at checkout.
 - the site has a public GitHub repository and is deployed using Netlify.
 

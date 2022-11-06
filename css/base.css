@@ -14,10 +14,7 @@
 
 /*You can use CSS variables to keep common CSS values such as sizes, colors, fonts, etc (from discordi)*/
 :root {
-
-  /* Colors */
-
-    /* "medium light grey" site layout background */
+  /* "medium light grey" site layout background */
   --bg-gray-light-color: #dfdfdf;
 
   /* header, footer bg "light gray"*/
@@ -40,23 +37,14 @@
 
   /* overlay "gray color" */
   --overlay-color: gray;
-  
+
   /* bg checkout success page*/
   --bg-checkout-color: #d9e0e6;
 
   /* color label produts*/
   --white: #ffffff;
   --black: #000000;
-  --dark-green:#464e2e;
-
- /* Space*/
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 32px;
-  --space-5: 48px;
-  --space-6: 64px;
-  
+  --dark-green: #464e2e;
 }
 
 body {
