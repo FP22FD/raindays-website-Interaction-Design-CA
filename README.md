@@ -24,7 +24,7 @@ The website implementation has been made with `HTML` and `CSS` to practice:
 
 Implemented structure flows:
 
-- users can access the site by desktop and mobile advice.
+- users can access the site by desktop and mobile devices.
 - users will be able to browse all available products and pay for them at checkout.
 - the site has a public GitHub repository and is deployed using Netlify.
 
@@ -48,10 +48,9 @@ No other tools are required to compile or run the website.
 The Figma prototypes from the previous CA:
 
 - [Figma Mobile prototype](https://www.figma.com/proto/o9Y8vfut7qEa2hOQ5RBPBm/Design1_FP?page-id=924%3A505&node-id=1139%3A899&viewport=472%2C109%2C0.34&scaling=min-zoom&starting-point-node-id=1139%3A899&show-proto-sidebar=1)
-  
 - [Figma Desktop prototype](https://www.figma.com/proto/o9Y8vfut7qEa2hOQ5RBPBm/Design1_FP?page-id=924%3A506&node-id=1139%3A1932&viewport=796%2C261%2C0.11&scaling=scale-down&starting-point-node-id=1139%3A1932&show-proto-sidebar=1)
 
-In the implemented website version, few improvements were made based on the Tutor feedbacks.
+NB. The implemented website version is slightly different, because few improvements to the Figma/design files were made based on the `Design course` feedbacks from the Tutor.
 
 ### References
 
