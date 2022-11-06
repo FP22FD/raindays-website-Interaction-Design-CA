@@ -58,24 +58,6 @@
     width: 100%
 }
 
-button[type="submit"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #264348;
-    text-transform: uppercase;
-    padding: 4px;
-    border-radius: 16px;
-    gap: 8px;
-    color: #FFFFFF;
-    border: 0;
-}
-
-button[type="submit"]:hover {
-    color: var(--primary-color);
-}
-
 @media (max-width: 800px) {
     #flex-container {
         display: flex;

@@ -39,6 +39,10 @@
     margin-bottom: 24px;
 }
 
+.cta-large {
+    display: none;
+}
+
 /* media query */
 
 @media (max-width: 800px) {
@@ -52,5 +56,8 @@
     #products .product:nth-child(n+3) {
         display: none;
 
+    }
+    .cta-large {
+        display: block;
     }
 }

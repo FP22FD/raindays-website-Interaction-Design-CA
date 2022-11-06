@@ -46,7 +46,8 @@ html, body {
 
 body,
 textarea, 
-input {
+input, 
+button {
     font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -55,6 +56,12 @@ textarea, input {
     border-radius: 4px;
     border: 1px solid #A9AEB3;
     padding: 8px;
+}
+
+button[type="submit"] {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 0;
 }
 
 textarea:focus, input:focus {
@@ -92,9 +99,9 @@ a.active {
     font-size: 64px;
 }
 
-.text-light {
-    color: #ccc;
-}
+/* .text-light {
+    color: #212427;
+} */
 
 @media (max-width: 800px) {
     .display-2 {

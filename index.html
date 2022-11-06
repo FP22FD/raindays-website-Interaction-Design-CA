@@ -18,7 +18,6 @@
     <div id="main-container">
 
         <header>
-
             <div class="row1">
                 <!-- menu mobile version -->
                 <div id="menu-mobile">
@@ -39,11 +38,53 @@
                     </nav>
                 </div>
 
-                <a href="bag.html">
-                    <img id="xxsvg" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
-                </a>
-            </div>
+                <!-- START: bag popup -->
+                <div id="popup">
+                    <label for="icon-bag">
+                        <img id="" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
+                        <div id="icon-bag-pil"><span>1</span></div>
+                    </label>
+                    <input type="checkbox" id="icon-bag" />
+                    
+                    <div class="modal-content">
+                        <section class="section1">
+                                <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
+                                    <div id="details">
+                                        <h2>Men’s Fleece Jacket FE40 </h2>
+                                        <span id="size">Size: M</span>
+                                        <span id="qty">Q.ty: 1</span>
+                                        <span id="delivery">Delivery: Free</span>
+                                        <span class="price">kr 900,00 </span>
+                                    </div>
+                        </section>
 
+                        <section class="section2">
+                                <div class="total-order">
+                                    <span>Subtotal</span>
+                                    <span>Shipping</span>
+                                    <span>Order total</span>
+                                </div>
+                                <div class="total-price">
+                                    <span>kr 900,00</span>
+                                    <span>kr 000,00</span>
+                                    <span class="price">kr 900,00</span>
+                                </div>
+                        </section>
+
+                        <section class="section3">
+                            <div class="cta-large">
+                                <a href="checkout.html">
+                                    Pay
+                                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow"
+                                        id="right-arrow-small" />
+                                </a>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+                <!-- END: bag popup -->
+            </div>
             <div class="row2">
 
                 <a id="logo-img" href="index.html">
@@ -61,7 +102,6 @@
                         <a href="contact.html">Find us</a>
                     </nav>
                 </div>
-
             </div>
         </header>
 
@@ -304,6 +344,21 @@
                 </div>
 
             </section>
+            
+            <section id="products-pagination">
+                <a href="products.html" class="active">
+                    1
+                </a>
+                <a href="products.html">
+                    2
+                </a>
+                <a href="products.html">
+                    3
+                </a>
+                <a href="products.html">
+                    <img src="assets/icons/forward-arrow.svg" alt="Forward-arrow" class="right-arrow-small" />
+                </a>
+            </section>
 
             <section id="banner-bottom">
                 <div class="container">
@@ -328,24 +383,8 @@
                     </div>
                 </div>
             </section>
-
-            <section id="products-pagination">
-                <a href="products.html" class="active">
-                    1
-                </a>
-                <a href="products.html">
-                    2
-                </a>
-                <a href="products.html">
-                    3
-                </a>
-                <a href="products.html">
-                    <img src="assets/icons/forward-arrow.svg" alt="Forward-arrow" class="right-arrow-small" />
-                </a>
-            </section>
-
             <!-- menu mobile version -->
-            <section class="cta-large">
+            <section class="cta-large" id="btn-more">
                 <a href="products.html">
                     View more
                     <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow" id="right-arrow-small" />

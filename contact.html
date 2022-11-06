@@ -12,14 +12,12 @@
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/contact.css">
-
 </head>
 
 <body>
     <div id="main-container">
 
         <header>
-
             <div class="row1">
                 <!-- menu mobile version -->
                 <div id="menu-mobile">
@@ -30,19 +28,61 @@
 
                     <nav>
                         <ul>
-                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="index.html" >Home</a></li>
                             <li><a href="products.html">Women</a></li>
                             <li><a href="products.html">Men</a></li>
                             <li><a href="about-us.html">About us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.html" class="active">Contact</a></li>
                             <li><a href="contact.html">Find us</a></li>
                         </ul>
                     </nav>
                 </div>
 
-                <a href="bag.html">
-                    <img id="xxsvg" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
-                </a>
+                <!-- START: bag popup -->
+                <div id="popup">
+                    <label for="icon-bag">
+                        <img id="" src="assets/icons/shopping_bag.svg" alt="shopping bag" />
+                        <div id="icon-bag-pil"><span>1</span></div>
+                    </label>
+                    <input type="checkbox" id="icon-bag" />
+                
+                    <div class="modal-content">
+                        <section class="section1">
+                            <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
+                            <div id="details">
+                                <h2>Men’s Fleece Jacket FE40 </h2>
+                                <span id="size">Size: M</span>
+                                <span id="qty">Q.ty: 1</span>
+                                <span id="delivery">Delivery: Free</span>
+                                <span class="price">kr 900,00 </span>
+                            </div>
+                        </section>
+                
+                        <section class="section2">
+                            <div class="total-order">
+                                <span>Subtotal</span>
+                                <span>Shipping</span>
+                                <span>Order total</span>
+                            </div>
+                            <div class="total-price">
+                                <span>kr 900,00</span>
+                                <span>kr 000,00</span>
+                                <span class="price">kr 900,00</span>
+                            </div>
+                        </section>
+                
+                        <section class="section3">
+                            <div class="cta-large">
+                                <a href="checkout.html">
+                                    Pay
+                                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow" id="right-arrow-small" />
+                                </a>
+                            </div>
+                        </section>
+                
+                    </div>
+                </div>
+                <!-- END: bag popup -->
             </div>
 
             <div class="row2">
@@ -54,11 +94,11 @@
                 <!-- menu desktop version -->
                 <div class="menu-desktop">
                     <nav aria-label="Main menu">
-                        <a class="active" href="index.html">Home</a>
+                        <a  href="index.html">Home</a>
                         <a href="products.html">Women</a>
                         <a href="products.html">Men</a>
                         <a href="about-us.html">About us</a>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html" class="active">Contact</a>
                         <a href="contact.html">Find us</a>
                     </nav>
                 </div>
@@ -88,7 +128,7 @@
                     </div>
 
                     <div class="row4">
-                            <button type="submit">
+                            <button type="submit" class="cta-large">
                                 <span>Submit</span>
                                 <img src="assets/icons/forward-arrow-white.svg" alt="Forward-arrow"
                                     id="right-arrow-small" />

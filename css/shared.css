@@ -47,7 +47,7 @@ main {
     padding: 24px;
     display: grid;
     grid-template-columns: 24px auto 24px;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 100px;
     background-color: #EFEFEF;
 }
 
@@ -118,9 +118,11 @@ main {
 /* CTA - view more */
 
 .cta-large {
-    /* display: none; */
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 24px;
 
     background-color: #264348;
     text-transform: uppercase;
@@ -135,8 +137,12 @@ main {
     gap: 24px;
 }
 
+.cta-large,
 .cta-large a:not(:hover) {
     color: #FFFFFF;
+}
+.cta-large span:hover {
+    color: var(--primary-color);
 }
 
 /* media query */
@@ -167,6 +173,6 @@ main {
     }
 
     .cta-large {
-        display: flex;
+        /* display: flex; */
     }
 }
