@@ -52,6 +52,14 @@ main {
     background-color: transparent;
 }
 
+.item2 #summary {
+    background-color: #E9E5D6;
+    text-transform: capitalize;
+    padding-left: 24px;
+    margin: 0 0 24px 0;
+    font-size: large;
+}
+
 .item2 #address {
     display: flex;
     flex-grow: 1;
