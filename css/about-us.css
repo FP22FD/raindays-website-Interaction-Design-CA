@@ -1,5 +1,5 @@
 #grid-container {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);

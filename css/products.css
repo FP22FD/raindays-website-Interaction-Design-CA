@@ -13,7 +13,7 @@
 }
 
 .product {
-  background-color: #efefef;
+  background-color: var(--bg-white-color);
   display: flex;
   flex-direction: column;
 }
@@ -27,12 +27,12 @@
 }
 
 .product .text {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
   padding: 0 0 0 8px;
 }
 
 .product .price {
-  color: #be5a38;
+  color: var(--primary-color);
   margin-top: 24px;
   margin-bottom: 24px;
 }

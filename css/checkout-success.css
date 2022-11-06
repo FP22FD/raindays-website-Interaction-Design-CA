@@ -9,16 +9,14 @@
   width: 100vw;
   height: 100vh;
 
-  background-color: gray;
+  background-color: var(--overlay-color);
   opacity: 50%;
   z-index: 10;
-  /* display:flex;
-    justify-content: center;
-     align-items: center; */
 }
 
 #box {
-  background-color: #d9e0e6;
+  background-color: var(--bg-checkout-color);
+
   position: absolute;
   top: 25%;
   left: 25%;
@@ -27,7 +25,6 @@
   z-index: 20;
 
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
 
@@ -35,7 +32,7 @@
 }
 
 #payment {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
   text-align: center;
   padding: 16px;
   width: 100%;
@@ -53,12 +50,7 @@
 #social-media {
   display: flex;
   flex-wrap: nowrap;
-  /* margin-top: 30px; */
-  /* align-items: center; */
   justify-content: center;
-  /* margin-top: 24px; */
-  /* margin-bottom: 24px; */
-  /* padding-top: 32px; */
 }
 
 #social-media a {
@@ -79,7 +71,6 @@ hr {
 #modal {
   margin: auto;
   width: 80%;
-  /* flex-basis: 50%; */
 
   display: flex;
   flex-direction: column;

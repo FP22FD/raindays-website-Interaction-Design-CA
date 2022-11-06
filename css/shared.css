@@ -23,7 +23,7 @@ main {
 /* top filter */
 
 #filter-top {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
@@ -48,7 +48,7 @@ main {
   display: grid;
   grid-template-columns: 24px auto 24px;
   grid-template-rows: auto 100px;
-  background-color: #efefef;
+  background-color: var(--bg-white-color);
 }
 
 #banner-bottom .container > div:first-child {
@@ -61,7 +61,7 @@ main {
 }
 
 #banner-bottom .text {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
   grid-column-start: 2;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -74,7 +74,7 @@ main {
 /* promo bottom */
 
 #promo-bottom {
-  background-color: #264348;
+  background-color: var(--secondary-color);
   display: flex;
   text-transform: uppercase;
   padding: 16px;
@@ -83,7 +83,7 @@ main {
 }
 
 #promo-bottom a:not(:hover) {
-  color: #ffffff;
+  color: var(--white);
 }
 
 /* products pagination */
@@ -110,7 +110,7 @@ main {
 
 #products-pagination a:hover,
 #products-pagination a.active {
-  background-color: #a9aeb3;
+  background-color: var(--bg-gray-line);
   border-radius: 50%;
 }
 
@@ -123,7 +123,7 @@ main {
   justify-content: center;
   gap: 24px;
 
-  background-color: #264348;
+  background-color: var(--secondary-color);
   text-transform: uppercase;
   padding: 16px;
   border-radius: 16px;
@@ -138,7 +138,7 @@ main {
 
 .cta-large,
 .cta-large a:not(:hover) {
-  color: #ffffff;
+  color: var(--white);
 }
 .cta-large span:hover {
   color: var(--primary-color);
@@ -170,8 +170,5 @@ main {
   #promo-bottom {
     display: none;
   }
-
-  .cta-large {
-    /* display: flex; */
-  }
+ 
 }

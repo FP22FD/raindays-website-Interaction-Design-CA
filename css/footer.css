@@ -1,7 +1,6 @@
 footer {
   grid-area: footer;
-
-  background-color: #a9aeb3;
+  background-color: var(--bg-gray-line);
 }
 
 footer .social-media {
@@ -27,12 +26,9 @@ footer .social-media a:not(:last-child) {
   margin-right: 24px;
 }
 
-/*------------------------------------------*/
 footer .header {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
-  /* align-content: stretch; */
   justify-content: space-around;
 }
 
@@ -43,7 +39,7 @@ footer .col {
 
 footer .col h4 {
   font-size: 24px;
-  color: #212427;
+  color:var(--text-color);
   margin-bottom: 24px;
   font-weight: 400;
   position: relative;
@@ -61,8 +57,6 @@ footer .col ul li {
 footer .col ul li a {
   display: block;
 }
-
-/*------------------------------------------*/
 
 footer .bottom {
   display: flex;

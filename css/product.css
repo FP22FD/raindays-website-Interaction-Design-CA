@@ -5,7 +5,7 @@
 /* Products specific details*/
 
 #product-details > div {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
   text-align: left;
   padding: 8px;
 }
@@ -31,8 +31,9 @@
 }
 
 #product-details .item1 {
-  background-color: #efefef;
+  background-color: var(--bg-white-color);
 }
+
 .item1 {
   grid-area: 1 / 1 / span 4 / span 4;
 }
@@ -45,7 +46,7 @@
 
 .item3 {
   grid-area: 1 / 9 / span 1 / span 4;
-  color: #be5a38;
+  color: var(--primary-color);
   font-size: 32px;
   display: flex;
   align-content: center;
@@ -80,15 +81,15 @@
 }
 
 #product-colors #label-color-1 {
-  background-color: #464e2e;
+  background-color: var(--dark-green);
 }
 
 #product-colors #label-color-2 {
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 #product-colors #label-color-3 {
-  background-color: #000000;
+  background-color: var(--black);
 }
 
 #product-colors input[type="radio"]:checked + label {
@@ -140,7 +141,7 @@
 }
 
 .product {
-  background-color: #efefef;
+  background-color: var(--bg-white-color);
   display: flex;
   flex-direction: column;
 }
@@ -154,12 +155,12 @@
 }
 
 .product .text {
-  background-color: #e9e5d6;
+  background-color: var(--bg-beige-color);
   padding: 0 0 0 8px;
 }
 
 .product .price {
-  color: #be5a38;
+  color: var(--primary-color);
   margin-top: 24px;
   margin-bottom: 24px;
 }

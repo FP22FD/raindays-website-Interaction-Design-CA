@@ -12,30 +12,51 @@
     format("truetype");
 }
 
-/*You can use CSS variables to keep common CSS values such as sizes,colors,fonts, etc (from discordi)*/
+/*You can use CSS variables to keep common CSS values such as sizes, colors, fonts, etc (from discordi)*/
 :root {
-  /* dark coral */
-  --primary-color: #be5a38;
 
-  /* font color */
-  --text-color: #212427;
+  /* Colors */
 
-  /* medium light grey background */
+    /* "medium light grey" site layout background */
   --bg-gray-light-color: #dfdfdf;
 
-  /* grigetto chiaro */
+  /* header, footer bg "light gray"*/
   --bg-gray-line: #a9aeb3;
+
+  /* accent color "dark coral" */
+  --primary-color: #be5a38;
+
+  /* cta, promo banner, logo, icon check color "dark green" */
+  --secondary-color: #264348;
 
   /* background beige color "eggeshell" */
   --bg-beige-color: #e9e5d6;
 
-  --white: #fff;
+  /* background images "white*/
+  --bg-white-color: #efefef;
+
+  /* font color "dark grey" */
+  --text-color: #212427;
+
+  /* overlay "gray color" */
+  --overlay-color: gray;
+  
+  /* bg checkout success page*/
+  --bg-checkout-color: #d9e0e6;
+
+  /* color label produts*/
+  --white: #ffffff;
+  --black: #000000;
+  --dark-green:#464e2e;
+
+ /* Space*/
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
   --space-4: 32px;
   --space-5: 48px;
   --space-6: 64px;
+  
 }
 
 body {
@@ -92,7 +113,6 @@ a:hover * {
   transition: all 0.3s ease;
   color: var(--primary-color);
 
-  /* text-decoration: underline; */
   font-weight: bold;
 }
 
@@ -104,10 +124,6 @@ a.active {
 .display-2 {
   font-size: 64px;
 }
-
-/* .text-light {
-    color: #212427;
-} */
 
 @media (max-width: 800px) {
   .display-2 {
