@@ -21,13 +21,14 @@
   --bg-gray-line: #a9aeb3;
 
   /* accent color "dark coral" */
-  --primary-color: #be5a38;
+  /* --primary-color: #be5a38; */
+  --primary-color: #a84827;
 
   /* cta, promo banner, logo, icon check color "dark green" */
   --secondary-color: #264348;
 
   /* background beige color "eggeshell" */
-  --bg-beige-color: #e9e5d6;
+  --bg-beige-color: #E9E5D6;
 
   /* background images "white*/
   --bg-white-color: #efefef;
@@ -105,13 +106,17 @@ a:hover * {
 }
 
 a.active {
-  color: var(--primary-color);
-  text-decoration: underline;
+  border-bottom: 4px solid var(--primary-color);
 }
 
 .display-2 {
   font-size: 64px;
+
+  margin: 0;
+  text-transform: uppercase;
+  display: inline;
 }
+
 
 @media (max-width: 800px) {
   .display-2 {

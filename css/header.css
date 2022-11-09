@@ -131,14 +131,17 @@ header #icon-bag-pil {
 header #icon-bag:checked ~ .modal-content {
   display: block;
 }
+
 header #icon-bag:checked ~ #xyz {
   display: block;
 }
+
 header #popup .modal-content {
   display: none;
   background: var(--bg-gray-light-color);
   padding: 32px;
   max-width: 30vh;
+  box-shadow: 8px 2px 12px 2px #aaaaaa;
 
   position: fixed;
   top: 45px;
@@ -146,7 +149,6 @@ header #popup .modal-content {
   margin-left: 25px;
   z-index: 1000;
 
-  border: 1px solid;
 }
 
 header #popup .price {
@@ -169,6 +171,7 @@ header #popup .section1 img {
   max-width: 100%;
   max-height: 100%;
   background-color: var(--bg-white-color);
+  padding: 4px;
 }
 
 #details {
@@ -179,26 +182,34 @@ header #popup .section1 img {
   margin: 0;
 }
 
-header #popup .section2 {
-  display: flex;
-
-  margin: 8px 0px;
-  gap: 4px;
-}
-
-header #popup .section2 > div {
-  flex-basis: 50%;
-
-  padding: 8px;
+table {
+  width: 100%;
+  text-align: left;
   background-color: var(--bg-beige-color);
+  margin: 8px 0;
+  margin: 4px 0 16px 0;
+  padding: 8px;
 }
 
-header #popup .total-order {
-  display: flex;
-  flex-direction: column;
+caption {
+  text-align: left;
+  margin: 4px;
 }
 
-header #popup .total-price {
-  display: flex;
-  flex-direction: column;
+th {
+  text-align: left;
+  font-weight: bold;
+  padding: 8px;
+}
+table tr td:nth-child(1) {
+  width: 100%;
+}
+table tr td:nth-child(2) {
+  width: min-content;
+  padding-right: 8px;
+}
+
+table tr td:nth-child(3) {
+  text-align: right;
+  width: min-content;
 }

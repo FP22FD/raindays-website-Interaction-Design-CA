@@ -59,3 +59,4 @@ NB. The implemented website version is slightly different, because few improveme
 - css selectors reference: <https://www.w3schools.com/csSref/css_selectors.php>
 - Hamburger menu based on `HTML and CSS Task 3.4`: <https://vimeo.com/481725388/ee9b0cfbc3>
 - How to overlap grid items: <https://mastery.games/post/overlapping-grid-items/>
+- Plugin for extra image [about us]: https://unsplash.com/
