@@ -17,51 +17,34 @@
 <body>
     <div id="main-container">
 
-        <header>
+        <header id="header-menu">
+            <!-- menu -->
 
-            <div class="row1">
-                <!-- menu mobile version -->
-                <div id="menu-mobile">
-                    <label for="hamburger-menu">
-                        <img src="assets/icons/hamburger_button.svg" alt="hamburger menu">
-                    </label>
-                    <input type="checkbox" id="hamburger-menu">
+            <!-- grid part | menu -->
+            <label class="hamburger-icon" for="hamburger">
+                <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
+            </label>
+            <input type="checkbox" id="hamburger">
 
-                    <nav>
-                        <ul>
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="products.html">Women</a></li>
-                            <li><a href="products.html">Men</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="contact.html">Find us</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">Home</a>
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="about-us.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Find us</a>
+            </nav>
 
-                <a href="bag.html">
-                    <img id="xxsvg" src="assets/icons/shopping_bag.svg" alt="shopping bag">
-                </a>
-            </div>
+            <!-- grid part | logo -->
+            <a id="logo-img" href="index.html">
+                <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
+            </a>
 
-            <div class="row2">
-
-                <a id="logo-img" href="index.html">
-                    <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
-                </a>
-
-                <!-- menu desktop version -->
-                <div class="menu-desktop">
-                    <nav aria-label="Main menu">
-                        <a class="active" href="index.html">Home</a>
-                        <a href="products.html">Women</a>
-                        <a href="products.html">Men</a>
-                        <a href="about-us.html">About us</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="contact.html">Find us</a>
-                    </nav>
-                </div>
-
+            <!-- grid part | bag -->
+            <div id="popup">
+                <label for="icon-bag">
+                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
+                </label>
             </div>
         </header>
 
