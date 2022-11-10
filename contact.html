@@ -5,52 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rainydays contact us to get info about our products and how to reach us">
+    <meta name="description" content="contact Rainydays to get info about products and how to reach us">
     <title>Rainydays | Contact</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/bag-popup.css">
 </head>
 
 <body>
     <div id="main-container">
 
-        <header>
-            <div class="row1">
-                <!-- menu mobile version -->
-                <div id="menu-mobile">
-                    <label for="hamburger-menu">
-                        <img src="assets/icons/hamburger_button.svg" alt="hamburger menu">
-                    </label>
-                    <input type="checkbox" id="hamburger-menu">
+        <header id="header-menu">
+            <!-- menu -->
 
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Women</a></li>
-                            <li><a href="products.html">Men</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                            <li><a href="contact.html" class="active">Contact</a></li>
-                            <li><a href="contact.html">Find us</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <!-- grid part | menu -->
+            <label class="hamburger-icon" for="hamburger">
+                <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
+            </label>
+            <input type="checkbox" id="hamburger">
 
-                <!-- START: bag popup -->
-                <div id="popup">
-                    <label for="icon-bag">
-                        <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
-                        <span id="icon-bag-pil"><span>1</span></span>
-                    </label>
-                    <input type="checkbox" id="icon-bag">
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">Home</a>
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="about-us.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Find us</a>
+            </nav>
+
+            <!-- grid part | logo -->
+            <a id="logo-img" href="index.html">
+                <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
+            </a>
+
+            <!-- grid part | bag -->
+            <!-- START: bag popup -->
+            <div id="popup">
+                <label for="icon-bag">
+                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
+                    <span id="icon-bag-pil"><span>1</span></span>
+                </label>
+                <input type="checkbox" id="icon-bag">
 
                 <div class="modal-content">
                     <article class="section1">
                         <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
                         <div id="details">
-                            <h2>Men’s Fleece Jacket FE40 </h2>
+                            <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
                             <span id="size">Size: M</span>
                             <span id="qty">Q.ty: 1</span>
                             <span id="delivery">Delivery: Free</span>
@@ -58,7 +62,7 @@
                         </div>
                     </article>
                     <table>
-                        <caption>SUM</caption>
+                        <caption>Order details</caption>
                         <tr>
                             <td>Subtotal</td>
                             <td>kr</td>
@@ -76,39 +80,18 @@
                         </tr>
                     </table>
 
-                        <section class="section3">
-                            <div class="cta-large">
-                                <a href="bag.html">
-                                    Checkout
-                                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
-                                </a>
-                            </div>
-                        </section>
-
+                    <div class="section3">
+                        <div class="cta-large">
+                            <a href="bag.html">
+                                Checkout
+                                <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-                <!-- END: bag popup -->
             </div>
-
-            <div class="row2">
-
-                <a id="logo-img" href="index.html">
-                    <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
-                </a>
-
-                <!-- menu desktop version -->
-                <div class="menu-desktop">
-                    <nav aria-label="Main menu">
-                        <a href="index.html">Home</a>
-                        <a href="products.html">Women</a>
-                        <a href="products.html">Men</a>
-                        <a href="about-us.html">About us</a>
-                        <a href="contact.html" class="active">Contact</a>
-                        <a href="contact.html">Find us</a>
-                    </nav>
-                </div>
-
-            </div>
+            <!-- END: bag popup -->
         </header>
 
         <main id="main">

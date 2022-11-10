@@ -1,215 +1,79 @@
-header {
+#header-menu {
   grid-area: header;
 
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, auto);
 
   background-color: var(--bg-gray-line);
   color: var(--text-color);
+  padding: 8px;
 }
 
-header .row1 {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-top: 8px;
+header .hamburger {
+  grid-area: 1 / 1 / span 1 / span 1;
 }
 
-header .row2 {
-  display: flex;
-  margin-left: 32px;
-  margin-right: 32px;
+header #popup {
+  grid-area: 1 / 2 / span 1 / span 1;
+
+  justify-self: end;
 }
 
 header #logo-img {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 32px;
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+header nav {
+  grid-area: 2 / 2 / span 1 / span 1;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: end;
+
+  gap: 8px;
+  margin-bottom: 32px;
+  margin-left: 32px;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+header .hamburger-icon img {
+  display: none;
+}
+
+#hamburger,
+#icon-bag {
+  display: none;
 }
 
 header #logo-img img {
   max-width: 200px;
 }
 
-header .menu-desktop {
-  align-self: end;
-  font-size: 22px;
-
-  flex-grow: 1;
-  margin-left: 32px;
-}
-
-header .menu-desktop nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-
-  margin-bottom: 32px;
-
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-header #menu-mobile {
-  display: none;
-}
-
-header #hamburger-menu {
-  display: none;
-}
-
-header #hamburger-menu:checked ~ nav {
-  display: block;
-}
-
-header #menu-mobile nav {
-  display: none;
-  background-color: var(--bg-gray-light-color);
-
-  position: fixed;
-  top: 45px;
-  left: 0px;
-  margin-left: 25px;
-  z-index: 1000;
-}
-
-header #menu-mobile nav ul {
-  padding: 0px;
-}
-
-header #menu-mobile nav li {
-  display: block;
-  padding: 20px 30px;
-}
-
 @media (max-width: 800px) {
-  header .row1 {
-    justify-content: space-between;
-  }
-
-  header .row2 {
-    justify-content: center;
-  }
-
-  header .row2 .menu-desktop {
+  nav {
+    grid-area: 1 / 1 / span 1 / span 1;
     display: none;
+
+    position: fixed;
+    top: 45px;
+    left: 0px;
+    margin-left: 25px;
+    z-index: 1000;
+    padding: 20px 30px;
+    background-color: var(--bg-gray-light-color);
   }
 
-  header #menu-mobile {
+  header #hamburger:checked ~ nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .hamburger-icon img {
     display: block;
   }
-}
-
-/*Popup*/
-
-header #popup {
-  display: block;
-}
-
-header #icon-bag {
-  display: none;
-}
-
-header #icon-bag-pil {
-  display: inline-flex;
-  position: relative;
-  left: -16px;
-  top: -12px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-
-  font-size: 12px;
-  justify-content: center;
-  align-items: center;
-}
-
-header #icon-bag:checked ~ .modal-content {
-  display: block;
-}
-
-header #icon-bag:checked ~ #xyz {
-  display: block;
-}
-
-header #popup .modal-content {
-  display: none;
-  background: var(--bg-gray-light-color);
-  padding: 32px;
-  max-width: 30vh;
-  box-shadow: 8px 2px 12px 2px #aaaaaa;
-
-  position: fixed;
-  top: 45px;
-  right: 0px;
-  margin-left: 25px;
-  z-index: 1000;
-
-}
-
-header #popup .price {
-  color: var(--primary-color);
-}
-
-header #popup .section1 {
-  display: flex;
-
-  background-color: var(--bg-beige-color);
-}
-
-header #popup .section1 > div {
-  flex-basis: 50%;
-
-  margin: 8px;
-}
-
-header #popup .section1 img {
-  max-width: 100%;
-  max-height: 100%;
-  background-color: var(--bg-white-color);
-  padding: 4px;
-}
-
-#details {
-  display: grid;
-}
-
-#details h2 {
-  margin: 0;
-}
-
-table {
-  width: 100%;
-  text-align: left;
-  background-color: var(--bg-beige-color);
-  margin: 8px 0;
-  margin: 4px 0 16px 0;
-  padding: 8px;
-}
-
-caption {
-  text-align: left;
-  margin: 4px;
-}
-
-th {
-  text-align: left;
-  font-weight: bold;
-  padding: 8px;
-}
-table tr td:nth-child(1) {
-  width: 100%;
-}
-table tr td:nth-child(2) {
-  width: min-content;
-  padding-right: 8px;
-}
-
-table tr td:nth-child(3) {
-  text-align: right;
-  width: min-content;
 }

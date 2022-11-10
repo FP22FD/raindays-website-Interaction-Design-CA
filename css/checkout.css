@@ -51,7 +51,7 @@ main {
   background-color: transparent;
 }
 
-.item2 #summary {
+.item2 #Order detailsmary {
   background-color: var(--bg-beige-color);
   text-transform: capitalize;
   padding-left: 24px;

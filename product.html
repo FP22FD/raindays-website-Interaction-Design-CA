@@ -5,110 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rainydays see jacket details">
+    <meta name="description" content="see Rainydays jacket details">
     <title>Rainydays | Product</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/bag-popup.css">
 </head>
 
 <body>
     <div id="main-container">
 
-        <header>
+        <header id="header-menu">
+            <!-- menu -->
 
-            <div class="row1">
-                <!-- menu mobile version -->
-                <div id="menu-mobile">
-                    <label for="hamburger-menu">
-                        <img src="assets/icons/hamburger_button.svg" alt="hamburger menu">
-                    </label>
-                    <input type="checkbox" id="hamburger-menu">
+            <!-- grid part | menu -->
+            <label class="hamburger-icon" for="hamburger">
+                <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
+            </label>
+            <input type="checkbox" id="hamburger">
 
-                    <nav>
-                        <ul>
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="products.html">Women</a></li>
-                            <li><a href="products.html">Men</a></li>
-                            <li><a href="about-us.html">About us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="contact.html">Find us</a></li>
-                        </ul>
-                    </nav>
-                </div>
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">Home</a>
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="about-us.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Find us</a>
+            </nav>
 
-                <!-- START: bag popup -->
-                <div id="popup">
-                    <label for="icon-bag">
-                        <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
-                    </label>
-                    <input type="checkbox" id="icon-bag">
+            <!-- grid part | logo -->
+            <a id="logo-img" href="index.html">
+                <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
+            </a>
 
-                    <div class="modal-content">
-                        <article class="section1">
-                            <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
-                            <div id="details">
-                                <h2>Men’s Fleece Jacket FE40 </h2>
-                                <span id="size">Size: M</span>
-                                <span id="qty">Q.ty: 1</span>
-                                <span id="delivery">Delivery: Free</span>
-                                <span class="price">kr 900,00 </span>
-                            </div>
-                        </article>
-                        <table>
-                            <caption>SUM</caption>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>kr</td>
-                                <td>900,00</td>
-                            </tr>
-                            <tr>
-                                <td>Shipping</td>
-                                <td>kr</td>
-                                <td>000,00</td>
-                            </tr>
-                            <tr>
-                                <td>Order total</td>
-                                <td class="price">kr</td>
-                                <td class="price">900,00</td>
-                            </tr>
-                        </table>
+            <!-- grid part | bag -->
+            <!-- START: bag popup -->
+            <div id="popup">
+                <label for="icon-bag">
+                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
+                    <span id="icon-bag-pil"><span>1</span></span>
+                </label>
+                <input type="checkbox" id="icon-bag">
 
-                        <section class="section3">
-                            <div class="cta-large">
-                                <a href="bag.html">
-                                    Checkout
-                                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
-                                </a>
-                            </div>
-                        </section>
+                <div class="modal-content">
+                    <article class="section1">
+                        <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
+                        <div id="details">
+                            <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                            <span id="size">Size: M</span>
+                            <span id="qty">Q.ty: 1</span>
+                            <span id="delivery">Delivery: Free</span>
+                            <span class="price">kr 900,00 </span>
+                        </div>
+                    </article>
+                    <table>
+                        <caption>Order details</caption>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>kr</td>
+                            <td>900,00</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>kr</td>
+                            <td>000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Order total</td>
+                            <td class="price">kr</td>
+                            <td class="price">900,00</td>
+                        </tr>
+                    </table>
 
+                    <div class="section3">
+                        <div class="cta-large">
+                            <a href="bag.html">
+                                Checkout
+                                <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-                <!-- END: bag popup -->
             </div>
-
-            <div class="row2">
-
-                <a id="logo-img" href="index.html">
-                    <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
-                </a>
-
-                <!-- menu desktop version -->
-                <div class="menu-desktop">
-                    <nav aria-label="Main menu">
-                        <a class="active" href="index.html">Home</a>
-                        <a href="products.html">Women</a>
-                        <a href="products.html">Men</a>
-                        <a href="about-us.html">About us</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="contact.html">Find us</a>
-                    </nav>
-                </div>
-
-            </div>
+            <!-- END: bag popup -->
         </header>
 
         <main id="main">
@@ -233,37 +216,9 @@
                         <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
                     </div>
                     <div class="text">
-                    <a href="product.html">
-                        <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
-                    </a>
-                        <div class="price">
-                            <span>kr 900,00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
-                    </div>
-                    <div class="text">
-                    <a href="product.html">
-                        <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
-                    </a>
-                        <div class="price">
-                            <span>kr 900,00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div>
-                        <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
-                    </div>
-                    <div class="text">
-                    <a href="product.html">
-                        <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
-                    </a>
+                        <a href="product.html">
+                            <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
+                        </a>
                         <div class="price">
                             <span>kr 900,00</span>
                         </div>
@@ -289,9 +244,37 @@
                         <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
                     </div>
                     <div class="text">
-                    <a href="product.html">
-                        <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
-                    </a>
+                        <a href="product.html">
+                            <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div>
+                        <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
+                    </div>
+                    <div class="text">
+                        <a href="product.html">
+                            <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
+                        </a>
+                        <div class="price">
+                            <span>kr 900,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div>
+                        <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
+                    </div>
+                    <div class="text">
+                        <a href="product.html">
+                            <h4 class="box-txt">Women’s Waterproof Jacket<br>WF28</h4>
+                        </a>
                         <div class="price">
                             <span>kr 900,00</span>
                         </div>
@@ -342,18 +325,19 @@
                 </a>
             </div>
 
-            <div class="cta-large">
+            <div class="cta-large view-more">
                 <a href="products.html">
                     View more
                     <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
                 </a>
             </div>
 
-        <section id="promo-bottom">
-            <h4><span><a href="products.html">OUTLET 30 % OFF ALL SUMMER JACKETS!</a>
-                    <br>
-                    <a href="products.html">code: sum22</a></span></h4>
-        </section>
+            <section id="promo-bottom">
+                <h4><span><a href="products.html">OUTLET<br>
+                            30% OFF ALL SUMMER JACKETS!</a>
+                        <br>
+                        <a href="products.html">CODE: OFF3022</a></span></h4>
+            </section>
 
         </main>
 
