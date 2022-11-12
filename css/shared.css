@@ -105,7 +105,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 36px;
   height: 36px;
   border-bottom: none;
@@ -151,7 +151,7 @@ main {
 
 @media (max-width: 800px) {
   #main-container {
-    grid-template-columns: 0px auto 0px;
+    grid-template-columns: 16px auto 16px;
   }
 
   #banner-top {
@@ -166,8 +166,16 @@ main {
     width: 32px;
   }
 
+  /* Slider - ref. https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
   #filter-top {
-    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 90vw;
+    overflow: hidden;
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 
   #promo-bottom {

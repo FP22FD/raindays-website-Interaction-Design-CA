@@ -45,12 +45,25 @@
 
 @media (max-width: 800px) {
   #products {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 8px;
-    row-gap: 8px;
+    align-self: center;
+
+    width: 90vw;
+    overflow: hidden;
+
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 
-  #products .product:nth-child(n + 3) {
+  #products .product {
+    min-width: 55vw;
+  }
+
+  #products-pagination {
     display: none;
   }
 

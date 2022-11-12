@@ -15,7 +15,6 @@ main {
 
 .section2 {
   grid-area: 1 / 2 / span 1 / span 1;
-  /* background-color: #e9e5d6; */
 }
 
 .section3 {
