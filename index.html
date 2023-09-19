@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/bag-popup.css">
+    <script defer src="js/index.js"></script>
     <!-- Hotjar Tracking Code for Rainydays -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -138,8 +139,24 @@
 
             <h1>Available products</h1>
 
+            <template id="product">
+                <div class="product">
+                    <div>
+                        <img>
+                    </div>
+                    <div class="text">
+                        <a>
+                            <h4 class="box-txt"></h4>
+                        </a>
+                        <div class="price">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
             <section id="products">
-                <div class="product">
+                <!-- <div class="product">
                     <div>
                         <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
                     </div>
@@ -305,7 +322,7 @@
                             <span>kr 900,00</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </section>
 
