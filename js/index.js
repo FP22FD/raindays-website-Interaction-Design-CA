@@ -5,7 +5,7 @@ async function displayJackets() {
   const data = await response.json();
   console.log("data", data);
 
-  // attenzione: "sort" modifica l'array direttamente, non ne fa una copia!
+  // attenzione: "sort" modifica l'array direttamente, non ne fa una copia.
 
   // vogliamo ordinare i dati con qualcosa di "sensato"
   // https://stackoverflow.com/a/51169
