@@ -117,14 +117,22 @@
                         </h1>
                     </div>
 
+                    <div id="isFormValid" class="isFormValid">
+                        <p>The form passed validation!</p>
+                    </div>
+                    
                     <div class="row2">
                         <label for="input-email" class="text-light">Email address</label>
                         <input type="email" name="email" id="input-email">
+                        <div class="message-error" id="email-error" style="display: block;">Please enter a valid email
+                            address</div>
                     </div>
 
                     <div class="row3">
                         <label for="input-message" class="text-light">Message</label>
                         <textarea name="input-message" id="input-message"></textarea>
+                        <div class="message-error" id="message-error" style="display: none;">Please type the subject
+                        </div>
                     </div>
 
                     <div class="row4">

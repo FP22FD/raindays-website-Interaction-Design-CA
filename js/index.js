@@ -1,3 +1,6 @@
+let x = localStorage.getItem("favorites");
+let favorites = JSON.parse(x);
+
 async function displayJackets() {
   const url = "https://api.noroff.dev/api/v1/rainy-days";
 
@@ -27,20 +30,25 @@ async function displayJackets() {
     return sortOrder;
   });
 
-  data.sort(function (a, b) {
-    if (a.price === b.price) {
-      return 0;
-    }
-    if (a.price > b.price) {
-      return +1;
-    }
-    if (a.price < b.price) {
-      return -1;
-    }
-  });
+  //   data.sort(function (a, b) {
+  //     if (a.price === b.price) {
+  //       return 0;
+  //     }
+  //     if (a.price > b.price) {
+  //       return +1;
+  //     }
+  //     if (a.price < b.price) {
+  //       return -1;
+  //     }
+  //   });
 
+  updateProducts(data);
+}
+
+function updateProducts(data) {
   // trovo il contenitore "padre" con flex wrap
   const products = document.querySelector("#products");
+  products.innerHTML = "";
 
   for (let i = 0; i < data.length; i++) {
     const item = data[i];
@@ -54,9 +62,34 @@ async function displayJackets() {
 
     // qui adesso modifichi i vari pezzi del template con i dati del singolo prodotto ricevuto dalle api
     product.querySelector("h4").innerText = item.title;
+    // product.querySelector("h4").a = product;
+
     product.querySelector("span").innerText = item.price;
-    product.querySelector("img").src = item.image;
+
     product.querySelector("img").alt = item.title;
+    product.querySelector("img").src = item.image;
+
+    product.querySelector("a").href = "product.html?id=" + item.id;
+
+    product.querySelector("i.fa-regular.fa-heart").style.backgroundColor = favorites.includes(item.id)
+      ? "red"
+      : "transparent";
+
+    product.querySelector("i.fa-regular.fa-heart").addEventListener("click", function () {
+      console.log(item.id);
+
+      if (favorites.includes(item.id) === false) {
+        favorites.push(item.id);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        updateProducts(data);
+      } else {
+        favorites = favorites.filter((favoriteId) => favoriteId !== item.id);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        updateProducts(data);
+      }
+    });
 
     // ora lo prendi e lo appendi agli altri
     products.appendChild(product);
@@ -64,6 +97,18 @@ async function displayJackets() {
 }
 
 displayJackets();
+
+// const favButtons = document.querySelectorAll(".fa-regular fa-heart");
+
+// favButtons.forEach((button) => {
+//   button.addEventListener("click", handleClick);
+//   console.log("event");
+// });
+
+// function handleClick() {
+//   console.log("event");
+//   // event.target.classList.toggle(".fa-regular fa-heart");
+// }
 
 /*
 [

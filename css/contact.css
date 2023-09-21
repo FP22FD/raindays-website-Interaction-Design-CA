@@ -58,6 +58,31 @@
 .row4 button {
   width: 100%;
 }
+/* ----------------------------- */
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8 px 0 8px;
+}
+
+#input-message {
+  min-height: 200px;
+}
+
+.message-error {
+  display: none;
+  color: #c6302c;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.isFormValid {
+  display: none;
+  color: rgb(40, 192, 40);
+  font-size: 16px;
+  margin-top: 2px;
+}
 
 @media (max-width: 800px) {
   #flex-container {
