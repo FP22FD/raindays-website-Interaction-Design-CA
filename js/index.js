@@ -1,6 +1,3 @@
-// let x = localStorage.getItem("favorites");
-// let favorites = JSON.parse(x);
-
 async function displayJackets() {
   const url = "https://api.noroff.dev/api/v1/rainy-days";
 
@@ -71,44 +68,12 @@ function updateProducts(data) {
 
     product.querySelector("a").href = "product.html?id=" + item.id;
 
-    // product.querySelector("i.fa-regular.fa-heart").style.backgroundColor = favorites.includes(item.id)
-    //   ? "red"
-    //   : "transparent";
-
-    // product.querySelector("i.fa-regular.fa-heart").addEventListener("click", function () {
-    //   console.log(item.id);
-
-    //   if (favorites.includes(item.id) === false) {
-    //     favorites.push(item.id);
-    //     localStorage.setItem("favorites", JSON.stringify(favorites));
-
-    //     updateProducts(data);
-    //   } else {
-    //     favorites = favorites.filter((favoriteId) => favoriteId !== item.id);
-    //     localStorage.setItem("favorites", JSON.stringify(favorites));
-
-    //     updateProducts(data);
-    //   }
-    // });
-
     // ora lo prendi e lo appendi agli altri
     products.appendChild(product);
   }
 }
 
 displayJackets();
-
-// const favButtons = document.querySelectorAll(".fa-regular fa-heart");
-
-// favButtons.forEach((button) => {
-//   button.addEventListener("click", handleClick);
-//   console.log("event");
-// });
-
-// function handleClick() {
-//   console.log("event");
-//   // event.target.classList.toggle(".fa-regular fa-heart");
-// }
 
 /*
 [
