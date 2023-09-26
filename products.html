@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/bag-popup.css">
     <script defer src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/eb5a68a8a6.js" crossorigin="anonymous"></script>
+
     <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -125,25 +127,33 @@
                         <br>
                         <a href="products.html">CODE: OFF3022</a></span></h4>
             </section>
+
             <div id="products-title">
                 <h1>All this year's products</h1>
             </div>
-            <section id="products">
-                <template id="product">
-                    <div class="product">
+
+            <template id="product">
+                <div class="product">
+                    <div>
+                        <img>
+                        <!-- cuore non nei preferiti -->
                         <div>
-                            <img>
-                        </div>
-                        <div class="text">
-                            <a>
-                                <h4 class="box-txt"></h4>
-                            </a>
-                            <div class="price">
-                                <span></span>
-                            </div>
+                            <i class="fa-regular fa-heart"></i>
                         </div>
                     </div>
-                </template>
+                    <div class="text">
+                        <a>
+                            <h4 class="box-txt"></h4>
+                        </a>
+                        <div class="price">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+            <section id="products">
+
                 <!-- <div class="product">
                     <div>
                         <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">

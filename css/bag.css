@@ -3,23 +3,34 @@
 main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
+  row-gap: 8px;
+  /* grid-template-rows: repeat(2, auto); */
 }
 
 /* section from grid areas*/
 
 .section1 {
-  grid-area: 1 / 1 / span 1 / span 1;
-  background-color: var(--bg-white-color);
+  /* grid-area: 1 / 1 / span 1 / span 1; */
+  /* background-color: var(--bg-white-color); */
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  /* flex-direction: row; */
 }
 
 .section2 {
-  grid-area: 1 / 2 / span 1 / span 1;
+  /* grid-area: 1 / 2 / span 1 / span 1; */
 }
 
 .section3 {
-  grid-area: 2 / 1 / span 1 / span 2;
+  /* grid-area: 2 / 1 / span 1 / span 2; */
+  grid-column-start: 1;
+  grid-column-end: span 2;
   text-align: center;
+
+  margin-left: 48px;
+  margin-right: 48px;
 }
 
 /* item 1 from section grid area*/
@@ -28,6 +39,8 @@ main {
   display: flex;
   padding: 24px;
   justify-content: center;
+
+  background-color: white;
 }
 .item1 img {
   width: 50%;
@@ -45,11 +58,14 @@ img {
   flex-basis: 80%;
   background-color: var(--bg-beige-color);
   height: 100%;
+
+  flex-direction: column;
+  /* row-gap: 50px; */
 }
 
 #details {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   row-gap: 16px;
   align-items: center;
@@ -58,12 +74,15 @@ img {
 }
 
 #title {
-  grid-area: 1 / 1 / span 1 / span 5;
+  grid-area: 1 / 1 / span 1 / span 6;
   align-items: start;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 h1 {
-  margin-top: 0px;
+  /* margin-top: 0px; */
 }
 
 #size {
@@ -72,6 +91,8 @@ h1 {
 
 #measure {
   grid-area: 2 / 2 / span 1 / span 1;
+
+  padding: 12px;
 }
 #qty {
   grid-area: 2 / 4 / span 1 / span 1;
@@ -81,12 +102,32 @@ h1 {
   grid-area: 2 / 5 / span 1 / span 1;
 }
 
+textarea,
+input {
+  padding: 0;
+  background-color: var(--bg-beige-color);
+  border-color: #d0d0d0;
+
+  margin: 12px;
+}
+
+#btnRemove {
+  background-color: var(--bg-beige-color);
+  /* display: flex; */
+  /* justify-content: end; */
+
+  border: none;
+  padding: 24px;
+}
+
 #delivery {
   grid-area: 3 / 1 / span 1 / span 1;
 }
 
 #free {
   grid-area: 3 / 2 / span 1 / span 1;
+
+  padding: 12px;
 }
 
 #price {
@@ -117,6 +158,10 @@ h1 {
   padding: 24px 0 24px 0;
 }
 
+#btnPay {
+  margin: 24px;
+}
+
 @media (max-width: 800px) {
   main {
     display: flex;
@@ -128,5 +173,9 @@ h1 {
     Ref: https: //www.geeksforgeeks.org/resize-image-proportionally-with-css/ */
     object-fit: contain;
     max-height: 30vh;
+  }
+
+  .section1 {
+    flex-direction: column;
   }
 }

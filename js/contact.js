@@ -1,17 +1,15 @@
-const form = document.querySelector("#flex-container");
+const form = document.querySelector("form");
 
-form.addEventListener("click", validateForm);
+form.addEventListener("submit", validateForm);
 
 function validateForm(event) {
   event.preventDefault();
-
 
   const message = document.querySelector("#input-message");
   const messageError = document.querySelector("#message-error");
 
   const email = document.querySelector("#input-email");
   const emailError = document.querySelector("#email-error");
-
 
   const isFormValid = document.querySelector("#isFormValid");
 
@@ -29,13 +27,13 @@ function validateForm(event) {
     emailError.style.display = "block";
   }
 
-
   if (isSubjectValid && isEmailValid) {
     isFormValid.style.display = "block";
+    document.querySelector("form").reset();
   } else {
     isFormValid.style.display = "none";
-
-    console.log("validation passed");
+    // form.reset();
+    // console.log("validation passed");
   }
 }
 

@@ -13,17 +13,19 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/bag.css">
     <link rel="stylesheet" href="css/bag-popup.css">
-<!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
-<script>
-    (function (h, o, t, j, a, r) {
-        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-        h._hjSettings = { hjid: 3659947, hjsv: 6 };
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script'); r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-</script>
+    <script src="https://kit.fontawesome.com/eb5a68a8a6.js" crossorigin="anonymous"></script>
+    <script defer src="js/bag.js"></script>
+    <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3659947, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
@@ -105,31 +107,39 @@
             <!-- END: bag popup -->
         </header>
 
-        <main id="main">
+        <template id="template1">
             <div class="section1">
-
                 <div class="item1">
                     <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
                 </div>
             </div>
+        </template>
 
+        <template id="template2">
             <section class="section2">
                 <div class="item2">
                     <div id="details">
                         <div id="title">
-                            <h1>Men’s Fleece Jacket FE40 </h1>
+                            <h1></h1>
+                            <button type="button" id="btnRemove" data-id="43242432-43-43243">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
                         </div>
                         <div id="size">Size:</div>
                         <div id="measure">M</div>
                         <div id="qty">Q.ty:</div>
-                        <div id="number">1</div>
+                        <div id="number">
+                            <input type="number" min="0" id="txtQty" value="9" />
+                        </div>
                         <div id="delivery">Delivery:</div>
                         <div id="free">Free</div>
                         <div id="price">kr 900,00 </div>
                     </div>
                 </div>
             </section>
+        </template>
 
+        <template id="template3">
             <div class="section3">
                 <div class="item3">
 
@@ -137,11 +147,11 @@
 
                         <div id="total">total</div>
                         <div id="final-price">2250 kr</div>
-
                     </div>
 
-                    <div id="progress-bar"><img src="assets/icons/progress-bar1.svg" alt="progress bar"></div>
-                    <div class="cta-large">
+                    <!-- <div id="progress-bar" style="border: 1px solid black;"><img src="assets/icons/progress-bar1.svg"
+                                            alt="progress bar"></div> -->
+                    <div id="btnPay" class="cta-large">
                         <a href="checkout.html">
                             Pay
                             <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
@@ -149,6 +159,134 @@
                     </div>
                 </div>
             </div>
+        </template>
+
+        <main id="main">
+            <!-- <div class="section1">
+        
+                        <div class="item1">
+                            <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                        </div>
+                    </div>  -->
+
+            <!-- <section class="section2">
+                        <div class="item2">
+                            <div id="details">
+                                <div id="title">
+                                    <h1>Men’s Fleece Jacket FE40 </h1>
+                                </div>
+                                <div id="size">Size:</div>
+                                <div id="measure">M</div>
+                                <div id="qty">Q.ty:</div>
+                                <div id="number">1</div>
+                                <div id="delivery">Delivery:</div>
+                                <div id="free">Free</div>
+                                <div id="price">kr 900,00 </div>
+                            </div>
+                        </div>
+                    </section> -->
+
+            <!-- <div class="section3">
+                        <div class="item3">
+        
+                            <div id="tot-payment">
+        
+                                <div id="total">total</div>
+                                <div id="final-price">2250 kr</div>
+        
+                            </div>
+        
+                            <div id="progress-bar"><img src="assets/icons/progress-bar1.svg" alt="progress bar"></div>
+                            <div class="cta-large">
+                                <a href="checkout.html">
+                                    Pay
+                                    <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+
+            <!------------------------------------------------------------------------------------------------- -->
+
+            <!-- product 1 -->
+            <div class="section1">
+                <div class="item1">
+                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                </div>
+            </div>
+
+            <section class="section2">
+                <div class="item2">
+
+                    <div id="details">
+                        <div id="title">
+                            <h1></h1>
+                            <button type="button" id="btnRemove">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                        <div id="size">Size:</div>
+                        <div id="measure">M</div>
+                        <div id="qty">Q.ty:</div>
+                        <div id="number">
+                            <input type="number" min="0" id="txtQty" value="9" />
+                        </div>
+                        <div id="delivery">Delivery:</div>
+                        <div id="free">Free</div>
+                        <div id="price">kr 900,00 </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- product 2 -->
+            <div class="section1">
+                <div class="item1">
+                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                </div>
+            </div>
+
+            <section class="section2">
+                <div class="item2">
+
+                    <div id="details">
+                        <div id="title">
+                            <h1></h1>
+                            <button type="button" id="btnRemove">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                        <div id="size">Size:</div>
+                        <div id="measure">M</div>
+                        <div id="qty">Q.ty:</div>
+                        <div id="number">
+                            <input type="number" min="0" id="txtQty" value="9" />
+                        </div>
+                        <div id="delivery">Delivery:</div>
+                        <div id="free">Free</div>
+                        <div id="price">kr 900,00 </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--  btn pay -->
+            <!-- <div class="section3">
+                <div class="item3">
+
+                    <div id="tot-payment">
+
+                        <div id="total">total</div>
+                        <div id="final-price">2250 kr</div>
+                    </div>
+
+                    
+                    <div id="btnPay" class="cta-large">
+                        <a href="checkout.html">
+                            Pay
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </div> -->
 
         </main>
 

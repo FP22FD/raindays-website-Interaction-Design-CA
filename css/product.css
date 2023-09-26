@@ -31,7 +31,8 @@
 }
 
 #product-details .item1 {
-  background-color: var(--bg-white-color);
+  /* background-color: var(--bg-white-color); */
+  background-color: white;
 }
 
 .item1 {
@@ -154,6 +155,8 @@
 
 .product img {
   width: 100%;
+  height: 350px;
+  object-fit: fill;
 }
 
 .product .text {
@@ -229,5 +232,3 @@
     display: block;
   }
 }
-
-

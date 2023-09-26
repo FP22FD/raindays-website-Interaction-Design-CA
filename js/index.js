@@ -71,11 +71,17 @@ function updateProducts(data) {
 
     product.querySelector("a").href = "product.html?id=" + item.id;
 
-    product.querySelector("i.fa-regular.fa-heart").style.backgroundColor = favorites.includes(item.id)
-      ? "red"
-      : "transparent";
+    const favoriteIcon = product.querySelector("i.fa-heart");
+    if (favorites.includes(item.id)) {
+      favoriteIcon.style.color = "red";
+      //   el.classList.remove("fa-regular");
+      favoriteIcon.classList.add("fa-solid");
+    } else {
+    //   const el = product.querySelector("i.fa-heart");
+      favoriteIcon.classList.add("fa-regular");
+    }
 
-    product.querySelector("i.fa-regular.fa-heart").addEventListener("click", function () {
+    product.querySelector("i.fa-heart").addEventListener("click", function () {
       console.log(item.id);
 
       if (favorites.includes(item.id) === false) {
