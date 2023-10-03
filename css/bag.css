@@ -9,6 +9,16 @@ main {
 
 /* section from grid areas*/
 
+#emptybag {
+  grid-area: 2 / 1 / span 3 / span 3;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  margin: 24px;
+}
+
 .section1 {
   /* grid-area: 1 / 1 / span 1 / span 1; */
   /* background-color: var(--bg-white-color); */
@@ -19,29 +29,37 @@ main {
   /* flex-direction: row; */
 }
 
-.section2 {
-  /* grid-area: 1 / 2 / span 1 / span 1; */
-}
+/* .section2 {
+  grid-area: 1 / 2 / span 1 / span 1;
+} */
 
 .section3 {
   /* grid-area: 2 / 1 / span 1 / span 2; */
   grid-column-start: 1;
   grid-column-end: span 2;
+
+  /* grid-row-end: span 2; */
   text-align: center;
 
   margin-left: 48px;
   margin-right: 48px;
+  margin-top: 48px;
+  padding-top: 12px;
+
+  /* display: flex; */
+  /* width: 50%; */
 }
 
 /* item 1 from section grid area*/
 
 .item1 {
-  display: flex;
   padding: 24px;
-  justify-content: center;
-
   background-color: white;
+
+  /* display: flex; */
+  /* justify-content: center; */
 }
+
 .item1 img {
   width: 50%;
 }
@@ -69,7 +87,7 @@ img {
   grid-template-rows: repeat(4, 1fr);
   row-gap: 16px;
   align-items: center;
-  padding: 24px;
+  padding: 12px;
   font-size: x-large;
 }
 
@@ -81,9 +99,9 @@ img {
   justify-content: space-between;
 }
 
-h1 {
-  /* margin-top: 0px; */
-}
+/* h1 {
+  margin-top: 0px;
+} */
 
 #size {
   grid-area: 2 / 1 / span 1 / span 1;
@@ -107,17 +125,16 @@ input {
   padding: 0;
   background-color: var(--bg-beige-color);
   border-color: #d0d0d0;
-
   margin: 12px;
 }
 
 #btnRemove {
   background-color: var(--bg-beige-color);
-  /* display: flex; */
-  /* justify-content: end; */
-
   border: none;
   padding: 24px;
+
+  /* display: flex; */
+  /* justify-content: end; */
 }
 
 #delivery {
@@ -141,6 +158,8 @@ input {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  /* width: 100%; */
 }
 
 #tot-payment {

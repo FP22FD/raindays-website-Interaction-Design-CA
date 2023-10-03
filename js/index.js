@@ -1,12 +1,18 @@
+import { updatePopupBag } from "./cart.js";
+
 let x = localStorage.getItem("favorites");
 let favorites = JSON.parse(x);
+
+if (favorites === null) {
+  favorites = [];
+}
 
 async function displayJackets() {
   const url = "https://api.noroff.dev/api/v1/rainy-days";
 
   const response = await fetch(url);
   const data = await response.json();
-  console.log("data", data);
+  //   console.log("data", data);
 
   // attenzione: "sort" modifica l'array direttamente, non ne fa una copia.
 
@@ -18,10 +24,10 @@ async function displayJackets() {
   // equivale a
   data.sort(function (a, b) {
     /*
-    > 0 => sort a after b, e.g. [b, a]
-    < 0 => sort a before b, e.g. [a, b]
-    === 0 => keep original order of a and b
-    */
+        > 0 => sort a after b, e.g. [b, a]
+        < 0 => sort a before b, e.g. [a, b]
+        === 0 => keep original order of a and b
+        */
 
     // The localeCompare() method of String values returns a number indicating whether this string comes before, or after, or is the same as the given string in sort order.
     // A negative number if referenceStr occurs before compareString; positive if the referenceStr occurs after compareString; 0 if they are equivalent.
@@ -68,8 +74,16 @@ function updateProducts(data) {
 
     product.querySelector("img").alt = item.title;
     product.querySelector("img").src = item.image;
+    // product.querySelector("img").href = "product.html?id=" + item.id;
 
-    product.querySelector("a").href = "product.html?id=" + item.id;
+    const links = product.querySelectorAll("a");
+    for (let ia = 0; ia < links.length; ia++) {
+      const link = links[ia];
+
+      link.href = "product.html?id=" + item.id;
+    }
+
+    // product.querySelectorAll("a").forEach((link) => (link.href = "product.html?id=" + item.id));
 
     const favoriteIcon = product.querySelector("i.fa-heart");
     if (favorites.includes(item.id)) {
@@ -77,12 +91,12 @@ function updateProducts(data) {
       //   el.classList.remove("fa-regular");
       favoriteIcon.classList.add("fa-solid");
     } else {
-    //   const el = product.querySelector("i.fa-heart");
+      //   const el = product.querySelector("i.fa-heart");
       favoriteIcon.classList.add("fa-regular");
     }
 
     product.querySelector("i.fa-heart").addEventListener("click", function () {
-      console.log(item.id);
+      //   console.log(item.id);
 
       if (favorites.includes(item.id) === false) {
         favorites.push(item.id);
@@ -104,17 +118,15 @@ function updateProducts(data) {
 
 displayJackets();
 
-// const favButtons = document.querySelectorAll(".fa-regular fa-heart");
+//  <----------TEMPLATE bag popup-------->
 
-// favButtons.forEach((button) => {
-//   button.addEventListener("click", handleClick);
-//   console.log("event");
-// });
+let getBag = localStorage.getItem("bag");
+let bag = JSON.parse(getBag);
+if (bag === null) {
+  bag = [];
+}
 
-// function handleClick() {
-//   console.log("event");
-//   // event.target.classList.toggle(".fa-regular fa-heart");
-// }
+updatePopupBag(bag);
 
 /*
 [

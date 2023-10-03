@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/bag-popup.css">
-    <script defer src="js/index.js"></script>
+    <script type="module" defer src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/eb5a68a8a6.js" crossorigin="anonymous"></script>
 
     <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
@@ -36,7 +36,7 @@
             <!-- menu -->
 
             <!-- grid part | menu -->
-            <label class="hamburger-icon" for="hamburger">
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
                 <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
             </label>
             <input type="checkbox" id="hamburger">
@@ -56,6 +56,42 @@
             </a>
 
             <!-- grid part | bag -->
+
+            <template id="template1">
+                <article class="section1">
+                    <div>
+                        <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket" id="bag-img">
+                    </div>
+
+                    <div id="details">
+                        <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                        <span id="size">Size: M</span>
+                        <span id="qty">Q.ty: 1</span>
+                        <span id="delivery">Delivery: Free</span>
+                        <span id="price" class="price">kr 900,00 </span>
+                    </div>
+                </article>
+            </template>
+
+            <template id="template2">
+                <table>
+                    <tr>
+                        <td>Order total</td>
+                        <td class="price">kr</td>
+                        <td id="final-price" class="price">000,00</td>
+                    </tr>
+                </table>
+
+                <div class="section3">
+                    <div class="cta-large">
+                        <a href="bag.html">
+                            Checkout
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </template>
+
             <!-- START: bag popup -->
             <div id="popup">
                 <label for="icon-bag">
@@ -64,7 +100,7 @@
                 </label>
                 <input type="checkbox" id="icon-bag">
 
-                <div class="modal-content">
+                <div class="modal-content" id="popup-products">
                     <article class="section1">
                         <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
                         <div id="details">
@@ -135,7 +171,9 @@
             <template id="product">
                 <div class="product">
                     <div>
-                        <img>
+                        <a>
+                            <img>
+                        </a>
                         <!-- cuore non nei preferiti -->
                         <div>
                             <i class="fa-regular fa-heart"></i>

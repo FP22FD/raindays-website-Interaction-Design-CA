@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/bag-popup.css">
-    <script defer src="js/product.js"></script>
+    <script type="module" defer src="js/product.js"></script>
     <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -34,7 +34,7 @@
             <!-- menu -->
 
             <!-- grid part | menu -->
-            <label class="hamburger-icon" for="hamburger">
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
                 <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
             </label>
             <input type="checkbox" id="hamburger">
@@ -54,6 +54,40 @@
             </a>
 
             <!-- grid part | bag -->
+            <template id="template1">
+                <article class="section1">
+                    <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket" id="bag-img">
+                    </div>
+
+                    <div id="details">
+                        <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                        <span id="size">Size: M</span>
+                        <span id="qty">Q.ty: 1</span>
+                        <span id="delivery">Delivery: Free</span>
+                        <span id="price" class="price">kr 900,00 </span>
+                    </div>
+                </article>
+            </template>
+
+            <template id="template2">
+                <table>
+                    <tr>
+                        <td>Order total</td>
+                        <td class="price">kr</td>
+                        <td id="final-price" class="price">000,00</td>
+                    </tr>
+                </table>
+
+                <div class="section3">
+                    <div class="cta-large">
+                        <a href="bag.html">
+                            Checkout
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </template>
+
             <!-- START: bag popup -->
             <div id="popup">
                 <label for="icon-bag">
@@ -62,7 +96,7 @@
                 </label>
                 <input type="checkbox" id="icon-bag">
 
-                <div class="modal-content">
+                <div class="modal-content" id="popup-products">
                     <article class="section1">
                         <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
                         <div id="details">
@@ -125,7 +159,7 @@
             <section id="product-details">
 
                 <div class="item1">
-                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt=" green jacket">
+                    <img src="" alt="">
                 </div>
                 <div class="item2">
                     <h1 id="title"><br></h1>
@@ -138,7 +172,7 @@
                 <div class="item4">
                     <p id="description"></p>
 
-                    <div id="product-colors">
+                    <!-- <div id="product-colors">
                         <div>
                             <input id="color-1" type="radio" name="colors" value="1">
                             <label for="color-1" aria-labelledby="color-1-text">
@@ -162,7 +196,7 @@
                                 <span id="color-3-text">Black</span>
                             </label>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="item5">
@@ -177,6 +211,7 @@
 
                 <div class="item7">
                     <div class="cta-large">
+                        <!-- href="#" per poter eseguire javascript senza far navigare, il # indica un anchor sulla pagina stessa. -->
                         <a href="#" id="btnAddToBag">
                             add to bag
                             <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">

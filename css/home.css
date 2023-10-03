@@ -55,18 +55,19 @@ h1 {
 
 .product {
   background-color: var(--bg-white-color);
-  /* background-color: white; */
-
   display: flex;
   flex-direction: column;
+
+  /* background-color: white; */
 }
 
 .product > div:first-child {
-  /* padding: 24px; */
+  padding: 24px;
   display: flex;
-  /* justify-content: center; */
   background-color: white;
   margin: 24px;
+
+  /* justify-content: center; */
   /* padding: 0; */
 }
 

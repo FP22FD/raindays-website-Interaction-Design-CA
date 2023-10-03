@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/bag-popup.css">
-    <script defer src="js/index.js"></script>
+    <script type="module" defer src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/eb5a68a8a6.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
     <script>
@@ -35,7 +35,7 @@
             <!-- menu -->
 
             <!-- grid part | menu -->
-            <label class="hamburger-icon" for="hamburger">
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
                 <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
             </label>
             <input type="checkbox" id="hamburger">
@@ -55,21 +55,54 @@
             </a>
 
             <!-- grid part | bag -->
+
+            <template id="template1">
+                <article class="section1">
+                    <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket" id="bag-img">
+                    </div>
+
+                    <div id="details">
+                        <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                        <span id="size">Size: M</span>
+                        <span id="qty">Q.ty: 1</span>
+                        <span id="delivery">Delivery: Free</span>
+                        <span id="price" class="price">kr 900,00 </span>
+                    </div>
+                </article>
+            </template>
+
+            <template id="template2">
+                <table>
+                    <tr>
+                        <td>Order total</td>
+                        <td class="price">kr</td>
+                        <td id="final-price" class="price">000,00</td>
+                    </tr>
+                </table>
+
+                <div class="section3">
+                    <div class="cta-large">
+                        <a href="bag.html">
+                            Checkout
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </template>
+
             <!-- START: bag popup -->
+
             <div id="popup">
-                <label for="icon-bag">
-                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
-                    <span id="icon-bag-pil"><span>favorites</span></span>
-                </label>
                 <label for="icon-bag">
                     <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
                     <span id="icon-bag-pil"><span>1</span></span>
                 </label>
                 <input type="checkbox" id="icon-bag">
 
-                <div class="modal-content">
-                    <article class="section1">
+                <div class="modal-content" id="popup-products">
+                    <!-- <article class="section1">
                         <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
+
                         <div id="details">
                             <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
                             <span id="size">Size: M</span>
@@ -77,13 +110,27 @@
                             <span id="delivery">Delivery: Free</span>
                             <span class="price">kr 900,00 </span>
                         </div>
-                    </article>
-                    <table>
+                    </article> -->
+
+                    <!-- <article class="section1">
+                        <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
+
+                        <div id="details">
+                            <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                            <span id="size">Size: M</span>
+                            <span id="qty">Q.ty: 1</span>
+                            <span id="delivery">Delivery: Free</span>
+                            <span class="price">kr 900,00 </span>
+                        </div>
+                    </article> -->
+
+
+                    <!-- <table>
                         <caption>Order details</caption>
                         <tr>
                             <td>Subtotal</td>
                             <td>kr</td>
-                            <td>900,00</td>
+                            <td id="subtotal">900,00</td>
                         </tr>
                         <tr>
                             <td>Shipping</td>
@@ -93,7 +140,7 @@
                         <tr>
                             <td>Order total</td>
                             <td class="price">kr</td>
-                            <td class="price">900,00</td>
+                            <td id="final-price" class="price">000,00</td>
                         </tr>
                     </table>
 
@@ -104,9 +151,10 @@
                                 <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
                             </a>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
+
             </div>
             <!-- END: bag popup -->
         </header>
@@ -114,7 +162,9 @@
         <main id="main">
             <section id="banner-top">
                 <div class="image">
-                    <img src="assets/images/low-quality/RainyDays_Jacket1.png" alt="Orange jacket" class="img">
+                    <a href="products.html">
+                        <img src="assets/images/low-quality/RainyDays_Jacket1.png" alt="Orange jacket" class="img">
+                    </a>
                 </div>
 
                 <div class="text-container">
@@ -147,7 +197,9 @@
             <template id="product">
                 <div class="product">
                     <div>
-                        <img>
+                        <a>
+                            <img>
+                        </a>
                         <div>
                             <i class="fa-heart"></i>
                         </div>
@@ -164,9 +216,15 @@
             </template>
 
             <section id="products">
-                <!-- <div class="product">
+                <!--
+                <div class="product">
                     <div>
-                        <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
+                        <a href="product.html">
+                            <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
+                        </a>
+                        <div>
+                            <i class="fa-heart"></i>
+                        </div>
                     </div>
                     <div class="text">
                         <a href="product.html">
@@ -177,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-
+               
                 <div class="product">
                     <div>
                         <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="season jacket women">
@@ -352,7 +410,9 @@
             <section id="banner-bottom">
                 <div class="container">
                     <div>
-                        <img src="assets/images/low-quality/RainyDays_Jacket2.png" alt="season jacket women">
+                        <a href="products.html">
+                            <img src="assets/images/low-quality/RainyDays_Jacket2.png" alt="season jacket women">
+                        </a>
                     </div>
                     <div class="text">
                         <a href="products.html">
@@ -363,7 +423,9 @@
 
                 <div class="container">
                     <div>
-                        <img src="assets/images/low-quality/RainyDays_Jacket5.png" alt="season jacket men">
+                        <a href="products.html"><img src="assets/images/low-quality/RainyDays_Jacket5.png"
+                                alt="season jacket men">
+                        </a>
                     </div>
                     <div class="text">
                         <a href="products.html">

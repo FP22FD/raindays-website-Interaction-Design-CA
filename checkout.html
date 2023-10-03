@@ -12,17 +12,18 @@
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/checkout.css">
-<!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
-<script>
-    (function (h, o, t, j, a, r) {
-        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-        h._hjSettings = { hjid: 3659947, hjsv: 6 };
-        a = o.getElementsByTagName('head')[0];
-        r = o.createElement('script'); r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-</script>
+    <script type="module" defer src="js/checkout.js"></script>
+    <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3659947, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
             <!-- menu -->
 
             <!-- grid part | menu -->
-            <label class="hamburger-icon" for="hamburger">
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
                 <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
             </label>
             <input type="checkbox" id="hamburger">
@@ -50,41 +51,51 @@
             <a id="logo-img" href="index.html">
                 <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
             </a>
-
-            <!-- grid part | bag -->
-            <div id="popup">
-                <label for="icon-bag">
-                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
-                </label>
-            </div>
         </header>
 
-        <main id="main">
-
+        <template id="template1">
             <section class="item1">
                 <div id="image">
                     <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
                 </div>
 
                 <div id="description">
-                    <h1>Men’s Fleece Jacket FE40 </h1>
+                    <h1></h1>
 
-                    <div id="size-qty">
-                        <div>Size: M</div>
-                        <div>Q.ty: 1</div>
+                    <div class="box-pr">
+                        <div>Size:</div>
+                        <div><span>M</span></div>
                     </div>
 
-                    <div>Delivery: Free</div>
-                    <div id="price">kr 900,00 </div>
+                    <div class="box-pr">
+                        <div>Q.ty:</div>
+                        <div id="number">
+                            <span>10</span>
+                            <!-- <input type="number" min="0" step="1" /> -->
+                        </div>
+                    </div>
+
+
+                    <div class="box-pr">
+                        <div>Delivery:</div>
+                        <div><span>Free</span></div>
+                    </div>
+
+                    <div class="box-pr">
+                        <div>Price:</div>
+                        <span>
+                            <div id="price"></div>
+                        </span>
+                    </div>
+
+
 
                 </div>
             </section>
+        </template>
 
+        <template id="template2">
             <section class="item2">
-                <div id="Order detailsmary">
-                    <h1>Order details</h1>
-                </div>
-
                 <div id="address">
                     Jeni Smitt Avenue Park, 4 <br>
                     1129 <br>
@@ -96,24 +107,82 @@
                     <span>**** **** **** 2039</span>
                 </div>
 
-                <div id="progress-bar">
+                <!-- <div id="progress-bar">
                     <img src="assets/icons/progress-bar-2.svg" alt="progress bar">
-                </div>
+                </div> -->
 
                 <div id="total">
                     <div>Total</div>
-                    <div>2250 kr</div>
+                    <div id="final-price">2250 kr</div>
                 </div>
 
                 <div class="cta-large">
-                    <a href="checkout-success.html">
+                    <a href="#" id="btnPay">
                         Pay
                         <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
                     </a>
                 </div>
+            </section>
+        </template>
+
+
+
+        <main id="main">
+            <div id="Order-detailsmary">
+                <h1>Order details</h1>
+            </div>
+
+            <section id="products">
 
             </section>
 
+            <!-- <section class="item1">
+                <div id="image">
+                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+
+                    <div id="description">
+                        <h1>Men’s Fleece Jacket FE40</h1>
+
+                        <div id="size-qty">
+                            <div>Size: M</div>
+                            <div>Q.ty: 1</div>
+                        </div>
+
+                        <div>Delivery: Free</div>
+                        <div id="price">kr 900,00 </div>
+
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <section class="item2">
+                <div>
+                    <div id="address">
+                        Jeni Smitt Avenue Park, 4 <br>
+                        1129 <br>
+                        New York, USA
+                    </div>
+
+                    <div id="card">
+                        <img src="assets/icons/icon_visa.svg" alt="Visa">
+                        <span>**** **** **** 2039</span>
+                    </div>
+
+
+
+                    <div id="total">
+                        <div>Total</div>
+                        <div>2250 kr</div>
+                    </div>
+
+                    <div class="cta-large">
+                        <a href="checkout-success.html">
+                            Pay
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </section> -->
         </main>
 
         <footer>

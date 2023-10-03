@@ -19,7 +19,7 @@
 }
 
 .product > div:first-child {
-  /* padding: 24px; */
+  padding: 24px;
   display: flex;
   /* justify-content: center; */
   background-color: white;

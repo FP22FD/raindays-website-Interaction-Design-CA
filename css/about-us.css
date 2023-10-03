@@ -10,7 +10,8 @@
   column-gap: 64px;
   row-gap: 12px;
   padding: 64px;
-  margin: 64px;
+
+  /* margin: 64px; */
 }
 
 #grid-container img {

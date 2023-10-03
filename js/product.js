@@ -1,3 +1,15 @@
+// --------------popup---------------
+import { updatePopupBag } from "./cart.js";
+
+let bag = JSON.parse(localStorage.getItem("bag"));
+if (bag === null) {
+  bag = [];
+}
+
+updatePopupBag(bag);
+
+// ---------------------------
+
 // let x = localStorage.getItem("favorites");
 // let favorites = JSON.parse(x);
 
@@ -10,7 +22,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 // console.log(id);
 
-let data=undefined;
+let data = undefined;
 
 async function displayJacket(id) {
   const url = "https://api.noroff.dev/api/v1/rainy-days/" + id;
@@ -67,7 +79,13 @@ function updateProducts(data) {
     product.querySelector("img").alt = item.title;
     product.querySelector("img").src = item.image;
 
-    product.querySelector("a").href = "product.html?id=" + item.id;
+    const links = product.querySelectorAll("a");
+    for (let ia = 0; ia < links.length; ia++) {
+      const link = links[ia];
+
+      link.href = "product.html?id=" + item.id;
+    }
+    // product.querySelector("a").href = "product.html?id=" + item.id;
 
     const favoriteIcon = product.querySelector("i.fa-heart");
     if (favorites.includes(item.id)) {
@@ -99,21 +117,11 @@ function updateProducts(data) {
 
 displayJackets();
 
-/* bag */
-let bag = JSON.parse(localStorage.getItem("bag"));
-// questo si può semplificare con
-// let bag = JSON.parse(localStorage.getItem("bag")) || [];
-if (bag === null) {
-  bag = [];
-}
-
-/* add to bag */
-
 document.querySelector("#btnAddToBag").addEventListener("click", function () {
   const inBag = bag.find((x) => x.id === id);
   if (inBag === undefined) {
     // non trovato, aggiungilo
-    bag.push({ id: id, qty: 1, image: data.image, title:data.title, price:data.price });
+    bag.push({ id: id, qty: 1, image: data.image, title: data.title, price: data.price });
   } else {
     // trovato, modifica la qty
     inBag.qty = inBag.qty + 1;
@@ -125,134 +133,3 @@ document.querySelector("#btnAddToBag").addEventListener("click", function () {
   // equivale a <a href="bag.html">...</a>
   window.location.href = "bag.html";
 });
-
-function removeFromBag(id) {
-  const inBag = bag.find((x) => x.id === id);
-  if (inBag === undefined) {
-    // errore
-  } else {
-    bag.filter((x) => x.id !== id);
-    localStorage.setItem("bag", JSON.stringify(bag));
-  }
-}
-
-function changeQty(id, qty) {
-  const inBag = bag.find((x) => x.id === id);
-  if (inBag === undefined) {
-    // errore
-  } else {
-    inBag.qty = qty;
-    localStorage.setItem("bag", JSON.stringify(bag));
-  }
-}
-
-function getTotal() {
-  let total = 0;
-
-  // per ogni prodotto del carrello
-  for (let i = 0; i < bag.length; i++) {
-    // item/prodotto del carrello
-    const item = bag[i];
-
-    // prendi il suo id
-    const productId = item.id;
-
-    // da tutti i prodotti (che vengono dalle api caricate all'inizio della pagina)
-    // trova quello con l'id del ciclo corrente
-    const productData = products.find((x) => x.id === productId);
-
-    // moltiplica il suo prezzo al totale x la qty voluta
-    const price = productData.price * item.qty;
-
-    // aggiungi il suo prezzo al totale
-    total = total + productData.price;
-  }
-  return total;
-}
-
-function displayBag() {
-  const bag = document.querySelector("#bag??");
-  bag.innerHTML = "";
-
-  for (let i = 0; i < bag.length; i++) {
-    const item = bag[i];
-    const productData = products.find((x) => x.id === item.id);
-
-    const template = document.querySelector("#bag-product???");
-
-    const product = template.content.cloneNode(true);
-
-    // quantita in carrello
-    product.querySelector("???").innerText = item.qty;
-
-    // dati del prodotto dalal lista generale che arriva dalle API
-    product.querySelector("???").innerText = productData.title;
-    product.querySelector("???").innerText = productData.price;
-    product.querySelector("???").alt = productData.title;
-    product.querySelector("???").src = productData.image;
-
-    // product.querySelector("???btn-rimuovi???").data.id = item.id;
-    // product.querySelector("???input-text-qty???").data.id = item.id;
-
-    // product.querySelector("a").href = "product.html?id=" + item.id;
-
-    // btn rimuovi dal carrello
-    product.querySelector("???").addEventListener("click", function (event) {
-      // aggiungere nel html del btn data-id="id"
-      // const productId = event.target.data.id;
-
-      // oppure si può usare l'id che abbiamo nel ciclo for
-      const productId = item.id;
-
-      console.log(productId);
-
-      removeFromBag(productId);
-    });
-
-    // input number qty - event input = valore cambiato
-    product.querySelector("???").addEventListener("input", function (event) {
-      // aggiungere nel html del btn data-id="id"
-      // const productId = event.target.data.id;
-
-      // oppure si può usare l'id che abbiamo nel ciclo for
-      const productId = item.id;
-
-      // event è l'evento e il suo contesto, in particolare ebent.target è l'elemento che ha generato l'evento
-      const qtyText = event.target.value;
-
-      const qty = parseInt(qtyText);
-      console.log(productId, qty);
-
-      changeQty(productId, qty);
-    });
-
-    products.appendChild(product);
-  }
-}
-
-/*
-{
-    "id": "b4eaa52e-2efe-4075-9772-e0c6d7ba04bb",
-    "title": "Rainy Days Venture Jacket",
-    "description": "The Women's Rainy Days Venture jacket is a lightweight and packable rain jacket that is perfect for travel.",
-    "gender": "Female",
-    "sizes": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-    ],
-    "baseColor": "Purple",
-    "price": 99.99,
-    "discountedPrice": 89.99,
-    "onSale": true,
-    "image": "https://static.cloud.noroff.dev/public/rainy-days/10-venture-jacket.jpg",
-    "tags": [
-        "jacket",
-        "womens"
-    ],
-    "favorite": false
-}
-*/

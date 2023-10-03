@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/bag.css">
     <link rel="stylesheet" href="css/bag-popup.css">
     <script src="https://kit.fontawesome.com/eb5a68a8a6.js" crossorigin="anonymous"></script>
-    <script defer src="js/bag.js"></script>
+    <script type="module" defer src="js/bag.js"></script>
     <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
     <script>
         (function (h, o, t, j, a, r) {
@@ -35,7 +35,7 @@
             <!-- menu -->
 
             <!-- grid part | menu -->
-            <label class="hamburger-icon" for="hamburger">
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
                 <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
             </label>
             <input type="checkbox" id="hamburger">
@@ -54,63 +54,13 @@
                 <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
             </a>
 
-            <!-- grid part | bag -->
-            <!-- START: bag popup -->
-            <div id="popup">
-                <label for="icon-bag">
-                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
-                    <span id="icon-bag-pil"><span>1</span></span>
-                </label>
-                <input type="checkbox" id="icon-bag">
 
-                <div class="modal-content">
-                    <article class="section1">
-                        <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
-                        <div id="details">
-                            <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
-                            <span id="size">Size: M</span>
-                            <span id="qty">Q.ty: 1</span>
-                            <span id="delivery">Delivery: Free</span>
-                            <span class="price">kr 900,00 </span>
-                        </div>
-                    </article>
-                    <table>
-                        <caption>Order details</caption>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td>kr</td>
-                            <td>900,00</td>
-                        </tr>
-                        <tr>
-                            <td>Shipping</td>
-                            <td>kr</td>
-                            <td>000,00</td>
-                        </tr>
-                        <tr>
-                            <td>Order total</td>
-                            <td class="price">kr</td>
-                            <td class="price">900,00</td>
-                        </tr>
-                    </table>
-
-                    <div class="section3">
-                        <div class="cta-large">
-                            <a href="bag.html">
-                                Checkout
-                                <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- END: bag popup -->
         </header>
 
         <template id="template1">
             <div class="section1">
                 <div class="item1">
-                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                    <a href=""><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></a>
                 </div>
             </div>
         </template>
@@ -121,7 +71,7 @@
                     <div id="details">
                         <div id="title">
                             <h1></h1>
-                            <button type="button" id="btnRemove" data-id="43242432-43-43243">
+                            <button type="button" id="btnRemove" aria-label="Remove">
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>
                         </div>
@@ -129,11 +79,11 @@
                         <div id="measure">M</div>
                         <div id="qty">Q.ty:</div>
                         <div id="number">
-                            <input type="number" min="0" id="txtQty" value="9" />
+                            <input aria-labelledby="qty" type="number" min="0" id="txtQty" />
                         </div>
                         <div id="delivery">Delivery:</div>
                         <div id="free">Free</div>
-                        <div id="price">kr 900,00 </div>
+                        <div id="price"></div>
                     </div>
                 </div>
             </section>
@@ -146,7 +96,7 @@
                     <div id="tot-payment">
 
                         <div id="total">total</div>
-                        <div id="final-price">2250 kr</div>
+                        <div id="final-price"></div>
                     </div>
 
                     <!-- <div id="progress-bar" style="border: 1px solid black;"><img src="assets/icons/progress-bar1.svg"
@@ -160,6 +110,10 @@
                 </div>
             </div>
         </template>
+
+        <div id="emptybag">
+            <p>Your bag is empty!</p>
+        </div>
 
         <main id="main">
             <!-- <div class="section1">
@@ -206,12 +160,12 @@
                         </div>
                     </div> -->
 
-            <!------------------------------------------------------------------------------------------------- -->
+            <!----------------------------------------------------------->
 
             <!-- product 1 -->
             <div class="section1">
                 <div class="item1">
-                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                    <a href=""><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></a>
                 </div>
             </div>
 
@@ -221,7 +175,7 @@
                     <div id="details">
                         <div id="title">
                             <h1></h1>
-                            <button type="button" id="btnRemove">
+                            <button type="button" class="btnRemove">
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>
                         </div>
@@ -229,11 +183,11 @@
                         <div id="measure">M</div>
                         <div id="qty">Q.ty:</div>
                         <div id="number">
-                            <input type="number" min="0" id="txtQty" value="9" />
+                            <input type="number" min="0" step="1" />
                         </div>
                         <div id="delivery">Delivery:</div>
                         <div id="free">Free</div>
-                        <div id="price">kr 900,00 </div>
+                        <div id="price"></div>
                     </div>
                 </div>
             </section>
@@ -241,7 +195,7 @@
             <!-- product 2 -->
             <div class="section1">
                 <div class="item1">
-                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                    <a href=""><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></a>
                 </div>
             </div>
 
@@ -251,7 +205,7 @@
                     <div id="details">
                         <div id="title">
                             <h1></h1>
-                            <button type="button" id="btnRemove">
+                            <button type="button" class="btnRemove">
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>
                         </div>
@@ -259,17 +213,17 @@
                         <div id="measure">M</div>
                         <div id="qty">Q.ty:</div>
                         <div id="number">
-                            <input type="number" min="0" id="txtQty" value="9" />
+                            <input type="number" min="0" id="txtQty" />
                         </div>
                         <div id="delivery">Delivery:</div>
                         <div id="free">Free</div>
-                        <div id="price">kr 900,00 </div>
+                        <div id="price"></div>
                     </div>
                 </div>
             </section>
 
-            <!--  btn pay -->
-            <!-- <div class="section3">
+            <!-- btn pay -->
+            <div class="section3">
                 <div class="item3">
 
                     <div id="tot-payment">
@@ -278,7 +232,7 @@
                         <div id="final-price">2250 kr</div>
                     </div>
 
-                    
+
                     <div id="btnPay" class="cta-large">
                         <a href="checkout.html">
                             Pay
@@ -286,7 +240,7 @@
                         </a>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
         </main>
 
