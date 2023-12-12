@@ -4,7 +4,17 @@
 
 The `Rainydays` website is a e-commerce shop for sport and outdoors jackets.
 
-The website is hosted at the following url: <https://luxury-halva-7c3f63.netlify.app>
+## UX improved version
+
+The `main` branch is the starting point where the UX improvements have been made.
+
+The improved version is available in the branch `improvements`: <https://github.com/FP22FD/raindays-website-Interaction-Design-CA/tree/improvements>. Details in the [Readme](https://github.com/FP22FD/raindays-website-Interaction-Design-CA/blob/improvements/README.md).
+
+The deployed versions are:
+
+- original static website (without API): <https://luxury-halva-7c3f63.netlify.app>
+- Improved Website with API, before UX improvements: <https://glistening-hummingbird-317e80.netlify.app/>
+- Final Website with UX improvements (`improvements` branch): <https://improvements--glistening-hummingbird-317e80.netlify.app/>
 
 ## Description
 
