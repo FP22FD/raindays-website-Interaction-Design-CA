@@ -6,6 +6,9 @@ The `Rainydays` website is a e-commerce shop for sport and outdoors jackets.
 
 ## UX improved version
 
+<img src="docs/improvements-desktop.png" height="300px" alt="Desktop">
+<img src="docs/improvements-mobile.png" height="300px" alt="Mobile">
+
 The `main` branch is the starting point where the UX improvements have been made.
 
 The improved version is available in the branch `improvements`: <https://github.com/FP22FD/raindays-website-Interaction-Design-CA/tree/improvements>. Details in the [Readme](https://github.com/FP22FD/raindays-website-Interaction-Design-CA/blob/improvements/README.md).
