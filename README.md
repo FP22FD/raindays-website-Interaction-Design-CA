@@ -1,5 +1,8 @@
 # Rainydays website
 
+<img src="docs/improvements-desktop.png" height="300px" alt="Desktop">
+<img src="docs/improvements-mobile.png" height="300px" alt="Mobile">
+
 <!-- A simple overview of use/purpose. -->
 
 The `Rainydays` website is a e-commerce shop for sport and outdoors jackets.
