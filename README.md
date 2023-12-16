@@ -43,7 +43,7 @@ I choose to collect data through filters, `heatmaps` and `recordings` to track u
 ![alt text](hotjar-heatmaps1.png)
 ![alt text](hotjar-heatmaps2.png)
 
-## Qualitatie test
+## Qualitative test
 
 This test was very important because I could test critical aspects of the site such as:
 
